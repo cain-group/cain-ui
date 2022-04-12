@@ -6,6 +6,21 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CaButton {
+        "circle": boolean;
+        "disabled": boolean;
+        "loading": boolean;
+        "plain": boolean;
+        "round": boolean;
+        "size": string;
+        "type": string;
+    }
+    interface CaButtonGroup {
+        "size": string;
+        "type": string;
+    }
+    interface CaIcon {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +37,24 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLCaButtonElement extends Components.CaButton, HTMLStencilElement {
+    }
+    var HTMLCaButtonElement: {
+        prototype: HTMLCaButtonElement;
+        new (): HTMLCaButtonElement;
+    };
+    interface HTMLCaButtonGroupElement extends Components.CaButtonGroup, HTMLStencilElement {
+    }
+    var HTMLCaButtonGroupElement: {
+        prototype: HTMLCaButtonGroupElement;
+        new (): HTMLCaButtonGroupElement;
+    };
+    interface HTMLCaIconElement extends Components.CaIcon, HTMLStencilElement {
+    }
+    var HTMLCaIconElement: {
+        prototype: HTMLCaIconElement;
+        new (): HTMLCaIconElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +62,28 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "ca-button": HTMLCaButtonElement;
+        "ca-button-group": HTMLCaButtonGroupElement;
+        "ca-icon": HTMLCaIconElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface CaButton {
+        "circle"?: boolean;
+        "disabled"?: boolean;
+        "loading"?: boolean;
+        "plain"?: boolean;
+        "round"?: boolean;
+        "size"?: string;
+        "type"?: string;
+    }
+    interface CaButtonGroup {
+        "size"?: string;
+        "type"?: string;
+    }
+    interface CaIcon {
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +99,9 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "ca-button": CaButton;
+        "ca-button-group": CaButtonGroup;
+        "ca-icon": CaIcon;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +109,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ca-button": LocalJSX.CaButton & JSXBase.HTMLAttributes<HTMLCaButtonElement>;
+            "ca-button-group": LocalJSX.CaButtonGroup & JSXBase.HTMLAttributes<HTMLCaButtonGroupElement>;
+            "ca-icon": LocalJSX.CaIcon & JSXBase.HTMLAttributes<HTMLCaIconElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
