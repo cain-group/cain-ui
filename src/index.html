@@ -9,9 +9,30 @@
   <script type="module" src="/build/cain-ui.esm.js"></script>
   <script nomodule src="/build/cain-ui.js"></script>
   <link rel="stylesheet" href="/build/cain-ui.css" />
+
+  <style>
+    </style>
 </head>
 
 <body>
+
+
+  <ca-container>
+    <ca-header height="30px">Header</ca-header>
+    <ca-main>Main</ca-main>
+  </ca-container>
+
+  <ca-container>
+    <ca-aside width="200px" style="    display: flex;justify-content: center;align-items: center;">Aside</ca-aside>
+    <ca-container>
+      <ca-header>Header</ca-header>
+      <ca-main>Main</ca-main>
+      <ca-footer>Footer</ca-footer>
+    </ca-container>
+  </ca-container>
+
+
+  <hr>
   <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
 
   <ca-icon color="#000">

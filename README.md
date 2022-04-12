@@ -1,6 +1,6 @@
 
 <br>
-<p align="center">Cain Ui - 面向未来的原生 web components UI组件库 基于Element-Plus设计</p>
+<p align="center">Cain Ui - 面向未来的原生 web components UI组件库 </p>
 <br>
 <p align="center">
 
@@ -21,10 +21,10 @@
 </p>
 
 
-
-
 - 💪 通用的Web Components API
+- 🔥 TypeScript编写
 - 😍 适用于Vue、React、Angular 等任何框架
+- 💎 基于Element-Plus(2.1.9)设计
 <!-- 
 https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
 
@@ -33,7 +33,7 @@ https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
     <script type="module" src="https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/cain-ui/cain-ui.esm.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/cain-ui/cain-ui.css"> -->
-    
+
 # 安装
  
 待补充
@@ -65,6 +65,7 @@ https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
 - [x] Button 按钮 ✔
 - [x] Border 边框 ❌
 - [x] Icon 图标 ❌
+- [ ] Container 布局容器 ✔
 - [ ] Layout 布局 ⏳
 - [ ] Link 链接 💤
 - [ ] Scrollbar 滚动条 💤
