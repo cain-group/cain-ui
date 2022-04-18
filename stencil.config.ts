@@ -1,8 +1,11 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import { postcss } from '@stencil/postcss';
+import autoprefixer from 'autoprefixer';
 export const config: Config = {
   namespace: 'cain-ui',
-  globalStyle:'src/global/app.css',
+  // globalStyle:'src/global/app.css',
+  globalStyle:'src/scss/base.scss',
   plugins: [
     sass({})
   ],

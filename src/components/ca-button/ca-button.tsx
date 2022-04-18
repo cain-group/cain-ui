@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element, State } from '@stencil/core';
+import { Component, Host, h, Prop, Element, State} from '@stencil/core';
 import { useNamespace, } from '../../hook/'
 
 // import LoadingIcon from '@element-plus/icons-svg/loading.svg';
@@ -19,9 +19,16 @@ export class CaButton {
 
   @Prop() round: boolean;
 
+  @Prop() autofocus: boolean;
+
   @Prop() circle: boolean;
 
   @Prop() size: string;
+
+  @Prop() nativeType: string = 'button';
+
+
+  // @Event() click: EventEmitter<Event>;
 
   @Element() el: HTMLElement;
 
@@ -56,6 +63,10 @@ export class CaButton {
     ].join(' ')
 
   }
+  emitClick(e: MouseEvent){
+    console.log(e)
+    // this.click.emit(e)
+  }
 
 
   render() {
@@ -74,9 +85,10 @@ export class CaButton {
         <button
           disabled={this.getDisabled()}
           class={this.getClass()}
+          autoFocus={this.autofocus}
+          type={this.nativeType}
         >
           {getLoadingStatus()}
-
 
 
 

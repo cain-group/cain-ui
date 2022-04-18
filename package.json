@@ -25,16 +25,24 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@element-plus/icons-svg": "^1.1.4",
     "@stencil/core": "^2.13.0",
-    "@stencil/sass": "^1.5.2"
-  },
-  "devDependencies": {
+    "@stencil/postcss": "^2.1.0",
+    "@stencil/sass": "^1.5.2",
     "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "autoprefixer": "^10.4.4",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "prettier": "^2.6.1"
   },
   "license": "MIT"
 }

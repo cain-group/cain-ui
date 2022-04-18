@@ -1,6 +1,6 @@
 
 <br>
-<p align="center">Cain Ui - 面向未来的原生 web components UI组件库 </p>
+<p align="center">Cain UI - 面向未来的原生 web components UI组件库 </p>
 <br>
 <p align="center">
 

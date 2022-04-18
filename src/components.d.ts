@@ -10,9 +10,11 @@ export namespace Components {
         "width": string;
     }
     interface CaButton {
+        "autofocus": boolean;
         "circle": boolean;
         "disabled": boolean;
         "loading": boolean;
+        "nativeType": string;
         "plain": boolean;
         "round": boolean;
         "size": string;
@@ -122,9 +124,11 @@ declare namespace LocalJSX {
         "width"?: string;
     }
     interface CaButton {
+        "autofocus"?: boolean;
         "circle"?: boolean;
         "disabled"?: boolean;
         "loading"?: boolean;
+        "nativeType"?: string;
         "plain"?: boolean;
         "round"?: boolean;
         "size"?: string;
