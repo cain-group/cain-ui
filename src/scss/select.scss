@@ -9,7 +9,7 @@
 
 @mixin select-tag-normal {
   white-space: normal;
-  z-index: var(--el-index-normal);
+  z-index: var(--ca-index-normal);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -55,7 +55,7 @@
 
   &:hover:not(.#{$namespace}-select--disabled) {
     .#{$namespace}-input__inner {
-      box-shadow: 0 0 0 1px var(--el-select-border-color-hover) inset;
+      box-shadow: 0 0 0 1px var(--ca-select-border-color-hover) inset;
     }
   }
 
@@ -67,7 +67,7 @@
 
     &:focus {
       @include inset-input-border(
-        var(--el-select-input-focus-border-color),
+        var(--ca-select-input-focus-border-color),
         true
       );
     }
@@ -77,9 +77,9 @@
     display: flex;
 
     & .#{$namespace}-select__caret {
-      color: var(--el-select-input-color);
-      font-size: var(--el-select-input-font-size);
-      transition: transform var(--el-transition-duration);
+      color: var(--ca-select-input-color);
+      font-size: var(--ca-select-input-font-size);
+      transition: transform var(--ca-transition-duration);
       transform: rotateZ(180deg);
       cursor: pointer;
 
@@ -88,15 +88,15 @@
       }
 
       @include when(show-close) {
-        font-size: var(--el-select-font-size);
+        font-size: var(--ca-select-font-size);
         text-align: center;
         transform: rotateZ(180deg);
-        border-radius: var(--el-border-radius-circle);
-        color: var(--el-select-input-color);
-        transition: var(--el-transition-color);
+        border-radius: var(--ca-border-radius-circle);
+        color: var(--ca-select-input-color);
+        transition: var(--ca-transition-color);
 
         &:hover {
-          color: var(--el-select-close-hover-color);
+          color: var(--ca-select-close-hover-color);
         }
       }
 
@@ -112,7 +112,7 @@
         cursor: not-allowed;
 
         &:hover {
-          @include inset-input-border(var(--el-select-disabled-border));
+          @include inset-input-border(var(--ca-select-disabled-border));
         }
       }
       & .#{$namespace}-select__caret {
@@ -122,7 +122,7 @@
 
     &.is-focus .#{$namespace}-input__inner {
       @include inset-input-border(
-        var(--el-select-input-focus-border-color),
+        var(--ca-select-input-focus-border-color),
         true
       );
     }
@@ -133,8 +133,8 @@
     outline: none;
     padding: 0;
     margin-left: 15px;
-    color: var(--el-select-multiple-input-color);
-    font-size: var(--el-select-font-size);
+    color: var(--ca-select-multiple-input-color);
+    font-size: var(--ca-select-font-size);
     appearance: none;
     height: 28px;
     background-color: transparent;
@@ -144,14 +144,14 @@
     cursor: pointer;
     position: absolute;
     top: 8px;
-    z-index: var(--el-index-top);
+    z-index: var(--ca-index-top);
     right: 25px;
-    color: var(--el-select-input-color);
+    color: var(--ca-select-input-color);
     line-height: 18px;
-    font-size: var(--el-select-input-font-size);
+    font-size: var(--ca-select-input-font-size);
 
     &:hover {
-      color: var(--el-select-close-hover-color);
+      color: var(--ca-select-close-hover-color);
     }
   }
 
@@ -183,13 +183,13 @@
       }
 
       .#{$namespace}-icon-close {
-        background-color: var(--el-text-color-placeholder);
+        background-color: var(--ca-text-color-placeholder);
         right: -7px;
         top: 0;
         color: $color-white;
 
         &:hover {
-          background-color: var(--el-text-color-secondary);
+          background-color: var(--ca-text-color-secondary);
         }
 
         &::before {

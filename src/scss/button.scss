@@ -20,6 +20,9 @@ $button-icon-span-gap: map.merge(
   @include set-component-css-var('button', $button);
 }
 
+#{$namespace}-button + #{$namespace}-button {
+  margin-left: 12px;
+}
 @include b(button) {
   display: inline-flex;
   justify-content: center;
@@ -43,14 +46,15 @@ $button-icon-span-gap: map.merge(
   user-select: none;
   vertical-align: middle;
 
+  
+
+
   > span {
     display: inline-flex;
     align-items: center;
   }
 
-  & + & {
-    margin-left: 12px;
-  }
+
 
   @include button-size(
     map.get($button-padding-vertical, 'default') - $button-border-width,

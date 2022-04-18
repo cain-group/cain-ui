@@ -4,7 +4,7 @@ import { useNamespace, } from '../../hook'
 @Component({
   tag: 'ca-header',
   styleUrl: '../../scss/header.scss',
-  shadow: true,
+  shadow: false,
 })
 export class CaHeader {
 

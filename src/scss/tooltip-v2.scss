@@ -4,15 +4,15 @@
 
 @include b(tooltip-v2) {
   @include e(content) {
-    --el-tooltip-v2-padding: 5px 10px;
-    --el-tooltip-v2-border-radius: 4px;
-    --#{$namespace}-tooltip-v2-border-color: var(--el-border-color);
+    --ca-tooltip-v2-padding: 5px 10px;
+    --ca-tooltip-v2-border-radius: 4px;
+    --#{$namespace}-tooltip-v2-border-color: var(--ca-border-color);
 
-    border-radius: var(--el-tooltip-v2-border-radius);
-    color: var(--el-color-black);
-    background-color: var(--el-color-white);
-    padding: var(--el-tooltip-v2-padding);
-    border: 1px solid var(--el-border-color);
+    border-radius: var(--ca-tooltip-v2-border-radius);
+    color: var(--ca-color-black);
+    background-color: var(--ca-color-white);
+    padding: var(--ca-tooltip-v2-padding);
+    border: 1px solid var(--ca-border-color);
 
     $content-selector: &;
 
@@ -25,7 +25,7 @@
 
     @include e(arrow) {
       position: absolute;
-      color: var(--el-color-white);
+      color: var(--ca-color-white);
       width: var(--#{$namespace}-tooltip-v2-arrow-width);
       height: var(--#{$namespace}-tooltip-v2-arrow-height);
       pointer-events: none;
@@ -78,12 +78,12 @@
 
     &.is-dark {
       --#{$namespace}-tooltip-v2-border-color: transparent;
-      background-color: var(--el-color-black);
-      color: var(--el-color-white);
+      background-color: var(--ca-color-black);
+      color: var(--ca-color-white);
       border-color: transparent;
 
       @include e(arrow) {
-        background-color: var(--el-color-black);
+        background-color: var(--ca-color-black);
         border-color: transparent;
       }
     }

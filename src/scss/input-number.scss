@@ -40,18 +40,18 @@
 
     width: map.get($input-height, 'default');
     background: getCssVar('fill-color', 'light');
-    color: var(--el-text-color-regular);
+    color: var(--ca-text-color-regular);
     cursor: pointer;
     font-size: 13px;
     user-select: none;
 
     &:hover {
-      color: var(--el-color-primary);
+      color: var(--ca-color-primary);
 
       & ~ .#{$namespace}-input:not(.is-disabled) .#{$namespace}-input__inner {
         box-shadow: 0 0 0 1px
           var(
-            --el-input-focus-border-color,
+            --ca-input-focus-border-color,
             map.get($input, 'focus-border-color')
           )
           inset;
@@ -66,23 +66,23 @@
 
   @include e(increase) {
     right: 1px;
-    border-radius: 0 var(--el-border-radius-base) var(--el-border-radius-base) 0;
-    border-left: var(--el-border);
+    border-radius: 0 var(--ca-border-radius-base) var(--ca-border-radius-base) 0;
+    border-left: var(--ca-border);
   }
 
   @include e(decrease) {
     left: 1px;
-    border-radius: var(--el-border-radius-base) 0 0 var(--el-border-radius-base);
-    border-right: var(--el-border);
+    border-radius: var(--ca-border-radius-base) 0 0 var(--ca-border-radius-base);
+    border-right: var(--ca-border);
   }
 
   @include when(disabled) {
     @include e((increase, decrease)) {
-      border-color: var(--el-disabled-border-color);
-      color: var(--el-disabled-border-color);
+      border-color: var(--ca-disabled-border-color);
+      color: var(--ca-disabled-border-color);
 
       &:hover {
-        color: var(--el-disabled-border-color);
+        color: var(--ca-disabled-border-color);
         cursor: not-allowed;
       }
     }
@@ -127,13 +127,13 @@
     }
 
     @include e((increase, decrease)) {
-      --el-input-number-controls-height: #{math.div(
+      --ca-input-number-controls-height: #{math.div(
           map.get($input-height, 'default') - 2,
           2
         )};
 
-      height: var(--el-input-number-controls-height);
-      line-height: var(--el-input-number-controls-height);
+      height: var(--ca-input-number-controls-height);
+      line-height: var(--ca-input-number-controls-height);
 
       [class*='#{$namespace}-icon'] {
         transform: scale(0.8);
@@ -143,8 +143,8 @@
     @include e(increase) {
       bottom: auto;
       left: auto;
-      border-radius: 0 var(--el-border-radius-base) 0 0;
-      border-bottom: var(--el-border);
+      border-radius: 0 var(--ca-border-radius-base) 0 0;
+      border-bottom: var(--ca-border);
     }
 
     @include e(decrease) {
@@ -152,15 +152,15 @@
       top: auto;
       left: auto;
       border-right: none;
-      border-left: var(--el-border);
-      border-radius: 0 0 var(--el-border-radius-base) 0;
+      border-left: var(--ca-border);
+      border-radius: 0 0 var(--ca-border-radius-base) 0;
     }
 
     @each $size in (large, small) {
       &[class*='#{$size}'] {
         [class*='increase'],
         [class*='decrease'] {
-          --el-input-number-controls-height: #{math.div(
+          --ca-input-number-controls-height: #{math.div(
               map.get($input-height, $size) - 2,
               2
             )};

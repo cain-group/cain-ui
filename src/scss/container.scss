@@ -1,5 +1,12 @@
 @use 'mixins/mixins' as *;
 
+
+
+
+#{$namespace}-container {
+  flex: 1;
+  flex-basis: auto;
+}
 @include b(container) {
   display: flex;
   flex-direction: row;

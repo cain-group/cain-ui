@@ -8,18 +8,18 @@
 
 @include b(notification) {
   display: flex;
-  width: var(--el-notification-width);
-  padding: var(--el-notification-padding);
-  border-radius: var(--el-notification-radius);
+  width: var(--ca-notification-width);
+  padding: var(--ca-notification-padding);
+  border-radius: var(--ca-notification-radius);
   box-sizing: border-box;
-  border: 1px solid var(--el-notification-border-color);
+  border: 1px solid var(--ca-notification-border-color);
   position: fixed;
   background-color: getCssVar('bg-color', 'overlay');
-  box-shadow: var(--el-notification-shadow);
-  transition: opacity var(--el-transition-duration),
-    transform var(--el-transition-duration), left var(--el-transition-duration),
-    right var(--el-transition-duration), top 0.4s,
-    bottom var(--el-transition-duration);
+  box-shadow: var(--ca-notification-shadow);
+  transition: opacity var(--ca-transition-duration),
+    transform var(--ca-transition-duration), left var(--ca-transition-duration),
+    right var(--ca-transition-duration), top 0.4s,
+    bottom var(--ca-transition-duration);
   overflow-wrap: anywhere;
   overflow: hidden;
   z-index: 9999;
@@ -33,23 +33,23 @@
   }
 
   @include e(group) {
-    margin-left: var(--el-notification-group-margin-left);
-    margin-right: var(--el-notification-group-margin-right);
+    margin-left: var(--ca-notification-group-margin-left);
+    margin-right: var(--ca-notification-group-margin-right);
   }
 
   @include e(title) {
     font-weight: bold;
-    font-size: var(--el-notification-title-font-size);
-    line-height: var(--el-notification-icon-size);
-    color: var(--el-notification-title-color);
+    font-size: var(--ca-notification-title-font-size);
+    line-height: var(--ca-notification-icon-size);
+    color: var(--ca-notification-title-color);
     margin: 0;
   }
 
   @include e(content) {
-    font-size: var(--el-notification-content-font-size);
+    font-size: var(--ca-notification-content-font-size);
     line-height: 24px;
     margin: 6px 0 0;
-    color: var(--el-notification-content-color);
+    color: var(--ca-notification-content-color);
     text-align: justify;
 
     p {
@@ -58,9 +58,9 @@
   }
 
   & .#{$namespace}-notification__icon {
-    height: var(--el-notification-icon-size);
-    width: var(--el-notification-icon-size);
-    font-size: var(--el-notification-icon-size);
+    height: var(--ca-notification-icon-size);
+    width: var(--ca-notification-icon-size);
+    font-size: var(--ca-notification-icon-size);
   }
 
   & .#{$namespace}-notification__closeBtn {
@@ -68,18 +68,18 @@
     top: 18px;
     right: 15px;
     cursor: pointer;
-    color: var(--el-notification-close-color);
-    font-size: var(--el-notification-close-font-size);
+    color: var(--ca-notification-close-color);
+    font-size: var(--ca-notification-close-font-size);
 
     &:hover {
-      color: var(--el-notification-close-hover-color);
+      color: var(--ca-notification-close-hover-color);
     }
   }
 
   @each $type in (success, info, warning, error) {
     & .#{$namespace}-notification--#{$type} {
-      --el-notification-icon-color: var(--el-color-#{$type});
-      color: var(--el-notification-icon-color);
+      --ca-notification-icon-color: var(--ca-color-#{$type});
+      color: var(--ca-notification-icon-color);
     }
   }
 }

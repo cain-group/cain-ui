@@ -9,14 +9,14 @@
 
   display: inline-block;
   position: relative;
-  font-size: var(--el-font-size-base);
+  font-size: var(--ca-font-size-base);
   line-height: map.get($input-height, 'default');
   outline: none;
 
   &:not(.is-disabled):hover {
     .#{$namespace}-input__inner {
       cursor: pointer;
-      box-shadow: 0 0 0 1px var(--el-input-hover-border-color) inset;
+      box-shadow: 0 0 0 1px var(--ca-input-hover-border-color) inset;
     }
   }
 
@@ -29,7 +29,7 @@
       &:focus {
         box-shadow: 0 0 0 1px
           var(
-            --el-input-focus-border-color,
+            --ca-input-focus-border-color,
             map.get($input, 'focus-border-color')
           )
           inset;
@@ -47,7 +47,7 @@
     }
 
     .icon-arrow-down {
-      transition: transform var(--el-transition-duration);
+      transition: transform var(--ca-transition-duration);
       font-size: 14px;
 
       @include when(reverse) {
@@ -57,7 +57,7 @@
 
     .icon-circle-close:hover {
       color: var(
-        --el-input-clear-hover-color,
+        --ca-input-clear-hover-color,
         map.get($input, 'clear-hover-color')
       );
     }
@@ -66,7 +66,7 @@
       .#{$namespace}-input__inner {
         box-shadow: 0 0 0 1px
           var(
-            --el-input-focus-border-color,
+            --ca-input-focus-border-color,
             map.get($input, 'focus-border-color')
           )
           inset;
@@ -83,7 +83,7 @@
 
   @include when(disabled) {
     .#{$namespace}-cascader__label {
-      z-index: calc(var(--el-index-normal) + 1);
+      z-index: calc(var(--ca-index-normal) + 1);
       color: getCssVar('disabled-text-color');
     }
   }
@@ -93,17 +93,17 @@
   }
 
   @include e(dropdown) {
-    font-size: var(--el-cascader-menu-font-size);
-    border-radius: var(--el-cascader-menu-radius);
+    font-size: var(--ca-cascader-menu-font-size);
+    border-radius: var(--ca-cascader-menu-radius);
 
     @include picker-popper(
-      var(--el-cascader-menu-fill),
-      var(--el-cascader-menu-border),
-      var(--el-cascader-menu-shadow)
+      var(--ca-cascader-menu-fill),
+      var(--ca-cascader-menu-border),
+      var(--ca-cascader-menu-shadow)
     );
 
     &.#{$namespace}-popper {
-      box-shadow: var(--el-cascader-menu-shadow);
+      box-shadow: var(--ca-cascader-menu-shadow);
     }
   }
 
@@ -125,7 +125,7 @@
       max-width: 100%;
       margin: 2px 0 2px 6px;
       text-overflow: ellipsis;
-      background: var(--el-cascader-tag-background);
+      background: var(--ca-cascader-tag-background);
 
       &:not(.is-hit) {
         border-color: transparent;
@@ -139,11 +139,11 @@
 
       .#{$namespace}-icon-close {
         flex: none;
-        background-color: var(--el-text-color-placeholder);
-        color: var(--el-color-white);
+        background-color: var(--ca-text-color-placeholder);
+        color: var(--ca-color-white);
 
         &:hover {
-          background-color: var(--el-text-color-secondary);
+          background-color: var(--ca-text-color-secondary);
         }
       }
     }
@@ -151,7 +151,7 @@
 
   @include e(collapse-tags) {
     white-space: normal;
-    z-index: var(--el-index-normal);
+    z-index: var(--ca-index-normal);
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -164,15 +164,15 @@
   }
 
   @include e(suggestion-panel) {
-    border-radius: var(--el-cascader-menu-radius);
+    border-radius: var(--ca-cascader-menu-radius);
   }
 
   @include e(suggestion-list) {
     max-height: 204px;
     margin: 0;
     padding: 6px 0;
-    font-size: var(--el-font-size-base);
-    color: var(--el-cascader-menu-text-color);
+    font-size: var(--ca-font-size-base);
+    color: var(--ca-cascader-menu-text-color);
     text-align: center;
   }
 
@@ -188,11 +188,11 @@
 
     &:hover,
     &:focus {
-      background: var(--el-cascader-node-background-hover);
+      background: var(--ca-cascader-node-background-hover);
     }
 
     &.is-checked {
-      color: var(--el-cascader-menu-selected-text-color);
+      color: var(--ca-cascader-menu-selected-text-color);
       font-weight: bold;
     }
 
@@ -203,7 +203,7 @@
 
   @include e(empty-text) {
     margin: 10px 0;
-    color: var(--el-cascader-color-empty);
+    color: var(--ca-cascader-color-empty);
   }
 
   @include e(search-input) {
@@ -212,13 +212,13 @@
     min-width: 60px;
     margin: 2px 0 2px map.get($input-padding-horizontal, 'default')-$border-width;
     padding: 0;
-    color: var(--el-cascader-menu-text-color);
+    color: var(--ca-cascader-menu-text-color);
     border: none;
     outline: none;
     box-sizing: border-box;
 
     &::placeholder {
-      color: var(--el-text-color-placeholder);
+      color: var(--ca-text-color-placeholder);
     }
   }
 }

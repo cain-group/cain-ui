@@ -19,6 +19,7 @@
     "loader/"
   ],
   "scripts": {
+    "doc:start": "dumi dev",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -34,15 +35,16 @@
     "@types/jest": "^27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
+    "autoprefixer": "^10.4.4",
+    "dumi": "^1.1.40",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
-    "autoprefixer": "^10.4.4",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0",
-    "prettier": "^2.6.1"
+    "prettier": "^2.6.1",
+    "puppeteer": "^10.0.0"
   },
   "license": "MIT"
 }

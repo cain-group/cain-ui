@@ -7,7 +7,10 @@ export const config: Config = {
   // globalStyle:'src/global/app.css',
   globalStyle:'src/scss/base.scss',
   plugins: [
-    sass({})
+    sass({}),
+    postcss({
+      plugins: [autoprefixer()],
+    }),
   ],
   outputTargets: [
     {

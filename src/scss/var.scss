@@ -25,10 +25,10 @@
   @include set-css-var-value('font-weight-primary', 500);
   @include set-css-var-value('font-line-height-primary', 24px);
 
-  // z-index --el-index-#{$type}
+  // z-index --ca-index-#{$type}
   @include set-component-css-var('index', $z-index);
 
-  // --el-border-radius-#{$type}
+  // --ca-border-radius-#{$type}
   @include set-component-css-var('border-radius', $border-radius);
 
   // Transition
@@ -47,24 +47,24 @@
   @include set-css-var-value('color-white', $color-white);
   @include set-css-var-value('color-black', $color-black);
 
-  // --el-color-#{$type}
-  // --el-color-#{$type}-light-{$i}
+  // --ca-color-#{$type}
+  // --ca-color-#{$type}-light-{$i}
   @each $type in (primary, success, warning, danger, error, info) {
     @include set-css-color-type($colors, $type);
   }
 
   // color-scheme
-  // Background --el-bg-color-#{$type}
+  // Background --ca-bg-color-#{$type}
   @include set-component-css-var('bg-color', $bg-color);
-  // --el-text-color-#{$type}
+  // --ca-text-color-#{$type}
   @include set-component-css-var('text-color', $text-color);
-  // --el-border-color-#{$type}
+  // --ca-border-color-#{$type}
   @include set-component-css-var('border-color', $border-color);
-  // Fill --el-fill-color-#{$type}
+  // Fill --ca-fill-color-#{$type}
   @include set-component-css-var('fill-color', $fill-color);
 
   // Box-shadow
-  // --el-box-shadow-#{$type}
+  // --ca-box-shadow-#{$type}
   @include set-component-css-var('box-shadow', $box-shadow);
   // Disable base
   @include set-component-css-var('disabled', $disabled);
@@ -79,7 +79,7 @@
   @include set-css-var-value('border-color-hover', $border-color-hover);
   @include set-css-var-value(
     'border',
-    #{var(--el-border-width) var(--el-border-style) var(--el-border-color)}
+    #{var(--ca-border-width) var(--ca-border-style) var(--ca-border-color)}
   );
 
   // Svg

@@ -56,16 +56,14 @@ https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
 - ⏳ 实现中
 - 💤 等待实现中
 
-## 相关文档
-
-- 相关文档 💤
 
 ## Basic 基础组件
 
 - Button 按钮 ✔
 - Border 边框 ❌
-- Icon 图标 ❌
+- Color 颜色 ✔
 - Container 布局容器 ✔
+- Icon 图标 ❌
 - Layout 布局 ⏳
 - Link 链接 💤
 - Scrollbar 滚动条 💤

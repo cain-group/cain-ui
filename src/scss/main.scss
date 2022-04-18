@@ -2,7 +2,8 @@
 @use 'mixins/var' as *;
 @use 'common/var' as *;
 
-@include b(main) {
+// @include b(main) {
+#{$namespace}-main {
   @include set-component-css-var('main', $main);
 
   // IE11 supports the <main> element partially https://caniuse.com/#search=main

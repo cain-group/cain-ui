@@ -19,11 +19,11 @@
   box-sizing: border-box;
   text-align: center;
   overflow: hidden;
-  color: var(--el-avatar-text-color);
-  background: var(--el-avatar-bg-color);
-  width: var(--el-avatar-size);
-  height: var(--el-avatar-size);
-  font-size: var(--el-avatar-text-size);
+  color: var(--ca-avatar-text-color);
+  background: var(--ca-avatar-bg-color);
+  width: var(--ca-avatar-size);
+  height: var(--ca-avatar-size);
+  font-size: var(--ca-avatar-text-size);
 
   > img {
     display: block;
@@ -35,11 +35,11 @@
   }
 
   @include m(square) {
-    border-radius: var(--el-avatar-border-radius);
+    border-radius: var(--ca-avatar-border-radius);
   }
 
   @include m(icon) {
-    font-size: var(--el-avatar-icon-size);
+    font-size: var(--ca-avatar-icon-size);
   }
 
   @each $size in (small, large) {

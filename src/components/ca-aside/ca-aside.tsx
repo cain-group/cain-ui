@@ -4,7 +4,7 @@ import { useNamespace, } from '../../hook'
 @Component({
   tag: 'ca-aside',
   styleUrl: '../../scss/aside.scss',
-  shadow: true,
+  shadow: false,
 })
 export class CaAside {
 

@@ -2,7 +2,7 @@
 @use 'common/var' as *;
 
 @include b(skeleton) {
-  --el-skeleton-circle-size: var(--el-avatar-size);
+  --ca-skeleton-circle-size: var(--ca-avatar-size);
 }
 
 @mixin circle-size($size) {
@@ -13,19 +13,19 @@
 
 @include b(skeleton) {
   @include e(item) {
-    background: var(--el-skeleton-color);
+    background: var(--ca-skeleton-color);
     display: inline-block;
     height: 16px;
-    border-radius: var(--el-border-radius-base);
+    border-radius: var(--ca-border-radius-base);
     width: 100%;
   }
 
   @include e(circle) {
     border-radius: 50%;
 
-    width: var(--el-skeleton-circle-size);
-    height: var(--el-skeleton-circle-size);
-    line-height: var(--el-skeleton-circle-size);
+    width: var(--ca-skeleton-circle-size);
+    height: var(--ca-skeleton-circle-size);
+    line-height: var(--ca-skeleton-circle-size);
   }
 
   @include e(button) {
@@ -47,23 +47,23 @@
 
   @include e(text) {
     width: 100%;
-    height: var(--el-font-size-small);
+    height: var(--ca-font-size-small);
   }
 
   @include e(caption) {
-    height: var(--el-font-size-extra-small);
+    height: var(--ca-font-size-extra-small);
   }
 
   @include e(h1) {
-    height: var(--el-font-size-extra-large);
+    height: var(--ca-font-size-extra-large);
   }
 
   @include e(h3) {
-    height: var(--el-font-size-large);
+    height: var(--ca-font-size-large);
   }
 
   @include e(h5) {
-    height: var(--el-font-size-medium);
+    height: var(--ca-font-size-medium);
   }
 
   @include e(image) {

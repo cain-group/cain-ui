@@ -27,7 +27,7 @@ $tag-icon-span-gap: map.merge(
   }
   @return $list;
 }
-// false mean --el-color-white
+// false mean --ca-color-white
 @mixin genTheme(
   $backgroundColorWeight,
   $borderColorWeight,
@@ -83,16 +83,16 @@ $tag-icon-span-gap: map.merge(
   }
 
   .#{$namespace}-tag__close {
-    color: var(--el-tag-text-color);
+    color: var(--ca-tag-text-color);
     &:hover {
-      color: var(--el-color-white);
-      background-color: var(--el-tag-hover-color);
+      color: var(--ca-color-white);
+      background-color: var(--ca-tag-hover-color);
     }
   }
 
-  background-color: var(--el-tag-bg-color);
-  border-color: var(--el-tag-border-color);
-  color: var(--el-tag-text-color);
+  background-color: var(--ca-tag-bg-color);
+  border-color: var(--ca-tag-border-color);
+  color: var(--ca-tag-text-color);
 
   display: inline-flex;
   justify-content: center;
@@ -101,24 +101,24 @@ $tag-icon-span-gap: map.merge(
   height: map.get($tag-height, 'default');
   padding: 0 map.get($tag-padding, 'default') - $border-width;
 
-  font-size: var(--el-tag-font-size);
+  font-size: var(--ca-tag-font-size);
   line-height: 1;
   border-width: $tag-border-width;
   border-style: solid;
-  border-radius: var(--el-tag-border-radius);
+  border-radius: var(--ca-tag-border-radius);
   box-sizing: border-box;
   white-space: nowrap;
 
-  --el-icon-size: 14px;
+  --ca-icon-size: 14px;
 
   $svg-margin-size: 1px;
   .#{$namespace}-icon {
     border-radius: 50%;
     cursor: pointer;
 
-    font-size: calc(var(--el-icon-size) - #{$svg-margin-size * 2});
-    height: var(--el-icon-size);
-    width: var(--el-icon-size);
+    font-size: calc(var(--ca-icon-size) - #{$svg-margin-size * 2});
+    height: var(--ca-icon-size);
+    width: var(--ca-icon-size);
   }
 
   .#{$namespace}-tag__close {
@@ -142,7 +142,7 @@ $tag-icon-span-gap: map.merge(
       padding: 0 map.get($tag-padding, $size) - $tag-border-width;
       height: map.get($tag-height, $size);
 
-      --el-icon-size: #{map.get($tag-icon-size, $size)};
+      --ca-icon-size: #{map.get($tag-icon-size, $size)};
 
       .#{$namespace}-tag__close {
         margin-left: map.get($tag-icon-span-gap, $size);
