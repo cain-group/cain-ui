@@ -1,23 +1,26 @@
 
 <br>
+<p align="center">
+  <img width="100px" src="https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/logo.png">
+</p>
+
 <p align="center">Cain UI - 面向未来的原生 web components UI组件库 </p>
 <br>
 <p align="center">
 
   <a href="https://github.com/ionic-team/stencil">
     <img src="https://img.shields.io/badge/Build%20with-Stenciljs-black">
-  </a>
+  </a>&nbsp;&nbsp;
   <a href="https://github.com/element-plus/element-plus">
     <img src="https://img.shields.io/badge/Design%20by-Element%20Plus-blue">
-  </a>
+  </a>  &nbsp;&nbsp;
 
   <a href="https://www.npmjs.org/package/@cain-group/cain-ui">
     <img src="https://img.shields.io/npm/v/@cain-group/cain-ui.svg">
-  </a>
+  </a> &nbsp;&nbsp;
   <a href="https://npmcharts.com/compare/@cain-group/cain-ui?minimal=true">
     <img src="https://img.shields.io/npm/dm/@cain-group/cain-ui.svg">
-  </a>
-
+  </a> &nbsp;&nbsp;
 </p>
 
 
