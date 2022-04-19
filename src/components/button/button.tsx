@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element, State} from '@stencil/core';
+import { Component, Host, h, Prop, Element, State } from '@stencil/core';
 import { useNamespace, } from '../../hook/'
 
 // import LoadingIcon from '@element-plus/icons-svg/loading.svg';
@@ -9,7 +9,7 @@ import { useNamespace, } from '../../hook/'
 })
 export class Button {
 
-  @Prop() type: string;
+  @Prop() type: 'primary' | 'success' | 'warning' | 'info' | 'danger' | 'default' = 'default';
 
   @Prop() disabled: boolean;
 
@@ -63,7 +63,7 @@ export class Button {
     ].join(' ')
 
   }
-  emitClick(e: MouseEvent){
+  emitClick(e: MouseEvent) {
     console.log(e)
     // this.click.emit(e)
   }

@@ -9,6 +9,7 @@ export default  [
             { title: 'Container 布局容器', path: '/components/container' },
             { title: 'Icon 图标', path: '/components/icon' },
             { title: 'Layout 布局', path: '/components/layout' },
+            { title: 'Link 链接', path: '/components/link' },
         ]
     },
   ];

@@ -18,7 +18,7 @@ export namespace Components {
         "plain": boolean;
         "round": boolean;
         "size": string;
-        "type": string;
+        "type": 'primary' | 'success' | 'warning' | 'info' | 'danger' | 'default';
     }
     interface CaButtonGroup {
         "size": string;
@@ -45,6 +45,12 @@ export namespace Components {
         "height": string;
     }
     interface CaIcon {
+    }
+    interface CaLink {
+        "disabled": boolean;
+        "href": string;
+        "type": 'primary' | 'success' | 'warning' | 'info' | 'danger' | 'default';
+        "underline": boolean;
     }
     interface CaMain {
     }
@@ -103,6 +109,12 @@ declare global {
         prototype: HTMLCaIconElement;
         new (): HTMLCaIconElement;
     };
+    interface HTMLCaLinkElement extends Components.CaLink, HTMLStencilElement {
+    }
+    var HTMLCaLinkElement: {
+        prototype: HTMLCaLinkElement;
+        new (): HTMLCaLinkElement;
+    };
     interface HTMLCaMainElement extends Components.CaMain, HTMLStencilElement {
     }
     var HTMLCaMainElement: {
@@ -124,6 +136,7 @@ declare global {
         "ca-footer": HTMLCaFooterElement;
         "ca-header": HTMLCaHeaderElement;
         "ca-icon": HTMLCaIconElement;
+        "ca-link": HTMLCaLinkElement;
         "ca-main": HTMLCaMainElement;
         "ca-row": HTMLCaRowElement;
     }
@@ -141,7 +154,7 @@ declare namespace LocalJSX {
         "plain"?: boolean;
         "round"?: boolean;
         "size"?: string;
-        "type"?: string;
+        "type"?: 'primary' | 'success' | 'warning' | 'info' | 'danger' | 'default';
     }
     interface CaButtonGroup {
         "size"?: string;
@@ -169,6 +182,12 @@ declare namespace LocalJSX {
     }
     interface CaIcon {
     }
+    interface CaLink {
+        "disabled"?: boolean;
+        "href"?: string;
+        "type"?: 'primary' | 'success' | 'warning' | 'info' | 'danger' | 'default';
+        "underline"?: boolean;
+    }
     interface CaMain {
     }
     interface CaRow {
@@ -185,6 +204,7 @@ declare namespace LocalJSX {
         "ca-footer": CaFooter;
         "ca-header": CaHeader;
         "ca-icon": CaIcon;
+        "ca-link": CaLink;
         "ca-main": CaMain;
         "ca-row": CaRow;
     }
@@ -201,6 +221,7 @@ declare module "@stencil/core" {
             "ca-footer": LocalJSX.CaFooter & JSXBase.HTMLAttributes<HTMLCaFooterElement>;
             "ca-header": LocalJSX.CaHeader & JSXBase.HTMLAttributes<HTMLCaHeaderElement>;
             "ca-icon": LocalJSX.CaIcon & JSXBase.HTMLAttributes<HTMLCaIconElement>;
+            "ca-link": LocalJSX.CaLink & JSXBase.HTMLAttributes<HTMLCaLinkElement>;
             "ca-main": LocalJSX.CaMain & JSXBase.HTMLAttributes<HTMLCaMainElement>;
             "ca-row": LocalJSX.CaRow & JSXBase.HTMLAttributes<HTMLCaRowElement>;
         }
