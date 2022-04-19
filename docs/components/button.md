@@ -238,4 +238,7 @@
     color:#0099c5;
     text-decoration:line-through;
   }
+  ca-row {
+    margin-bottom: 20px;
+}
 </style>

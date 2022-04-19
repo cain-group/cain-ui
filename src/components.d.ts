@@ -24,6 +24,17 @@ export namespace Components {
         "size": string;
         "type": string;
     }
+    interface CaCol {
+        "lg": number;
+        "md": number;
+        "offset": number;
+        "pull": number;
+        "push": number;
+        "sm": number;
+        "span": number;
+        "xl": number;
+        "xs": number;
+    }
     interface CaContainer {
         "direction": string;
     }
@@ -36,6 +47,11 @@ export namespace Components {
     interface CaIcon {
     }
     interface CaMain {
+    }
+    interface CaRow {
+        "align": 'top' | 'middle' | 'bottom' | 'space-around' | 'space-between' | 'space-evenly';
+        "gutter": number;
+        "justify": 'start' | 'center' | 'end' | 'space-around' | 'space-between' | 'space-evenly';
     }
     interface MyComponent {
         /**
@@ -71,6 +87,12 @@ declare global {
         prototype: HTMLCaButtonGroupElement;
         new (): HTMLCaButtonGroupElement;
     };
+    interface HTMLCaColElement extends Components.CaCol, HTMLStencilElement {
+    }
+    var HTMLCaColElement: {
+        prototype: HTMLCaColElement;
+        new (): HTMLCaColElement;
+    };
     interface HTMLCaContainerElement extends Components.CaContainer, HTMLStencilElement {
     }
     var HTMLCaContainerElement: {
@@ -101,6 +123,12 @@ declare global {
         prototype: HTMLCaMainElement;
         new (): HTMLCaMainElement;
     };
+    interface HTMLCaRowElement extends Components.CaRow, HTMLStencilElement {
+    }
+    var HTMLCaRowElement: {
+        prototype: HTMLCaRowElement;
+        new (): HTMLCaRowElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -111,11 +139,13 @@ declare global {
         "ca-aside": HTMLCaAsideElement;
         "ca-button": HTMLCaButtonElement;
         "ca-button-group": HTMLCaButtonGroupElement;
+        "ca-col": HTMLCaColElement;
         "ca-container": HTMLCaContainerElement;
         "ca-footer": HTMLCaFooterElement;
         "ca-header": HTMLCaHeaderElement;
         "ca-icon": HTMLCaIconElement;
         "ca-main": HTMLCaMainElement;
+        "ca-row": HTMLCaRowElement;
         "my-component": HTMLMyComponentElement;
     }
 }
@@ -138,6 +168,17 @@ declare namespace LocalJSX {
         "size"?: string;
         "type"?: string;
     }
+    interface CaCol {
+        "lg"?: number;
+        "md"?: number;
+        "offset"?: number;
+        "pull"?: number;
+        "push"?: number;
+        "sm"?: number;
+        "span"?: number;
+        "xl"?: number;
+        "xs"?: number;
+    }
     interface CaContainer {
         "direction"?: string;
     }
@@ -150,6 +191,11 @@ declare namespace LocalJSX {
     interface CaIcon {
     }
     interface CaMain {
+    }
+    interface CaRow {
+        "align"?: 'top' | 'middle' | 'bottom' | 'space-around' | 'space-between' | 'space-evenly';
+        "gutter"?: number;
+        "justify"?: 'start' | 'center' | 'end' | 'space-around' | 'space-between' | 'space-evenly';
     }
     interface MyComponent {
         /**
@@ -169,11 +215,13 @@ declare namespace LocalJSX {
         "ca-aside": CaAside;
         "ca-button": CaButton;
         "ca-button-group": CaButtonGroup;
+        "ca-col": CaCol;
         "ca-container": CaContainer;
         "ca-footer": CaFooter;
         "ca-header": CaHeader;
         "ca-icon": CaIcon;
         "ca-main": CaMain;
+        "ca-row": CaRow;
         "my-component": MyComponent;
     }
 }
@@ -184,11 +232,13 @@ declare module "@stencil/core" {
             "ca-aside": LocalJSX.CaAside & JSXBase.HTMLAttributes<HTMLCaAsideElement>;
             "ca-button": LocalJSX.CaButton & JSXBase.HTMLAttributes<HTMLCaButtonElement>;
             "ca-button-group": LocalJSX.CaButtonGroup & JSXBase.HTMLAttributes<HTMLCaButtonGroupElement>;
+            "ca-col": LocalJSX.CaCol & JSXBase.HTMLAttributes<HTMLCaColElement>;
             "ca-container": LocalJSX.CaContainer & JSXBase.HTMLAttributes<HTMLCaContainerElement>;
             "ca-footer": LocalJSX.CaFooter & JSXBase.HTMLAttributes<HTMLCaFooterElement>;
             "ca-header": LocalJSX.CaHeader & JSXBase.HTMLAttributes<HTMLCaHeaderElement>;
             "ca-icon": LocalJSX.CaIcon & JSXBase.HTMLAttributes<HTMLCaIconElement>;
             "ca-main": LocalJSX.CaMain & JSXBase.HTMLAttributes<HTMLCaMainElement>;
+            "ca-row": LocalJSX.CaRow & JSXBase.HTMLAttributes<HTMLCaRowElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
