@@ -17,14 +17,11 @@
 
 ## 常见页面布局
 
-  <div class="common-layout">
-    <ca-container>
-      <ca-header>Header</ca-header>
-      <ca-main>Main</ca-main>
-    </ca-container>
-  </div>
+```jsx
+import React from 'react';
 
-```html
+export default () =>  
+<div>
 
  <div class="common-layout">
     <ca-container>
@@ -32,9 +29,16 @@
       <ca-main>Main</ca-main>
     </ca-container>
   </div>
-  
+</div>
 ```
-<hr>
+
+
+
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
 
 <div class="common-layout">
     <ca-container>
@@ -43,19 +47,15 @@
       <ca-footer>Footer</ca-footer>
     </ca-container>
   </div>
-
-```html
-
-<div class="common-layout">
-    <ca-container>
-      <ca-header>Header</ca-header>
-      <ca-main>Main</ca-main>
-      <ca-footer>Footer</ca-footer>
-    </ca-container>
-  </div>
-  
+</div>
 ```
-<hr>
+
+
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
 
 <div class="common-layout">
     <ca-container>
@@ -63,18 +63,14 @@
       <ca-main>Main</ca-main>
     </ca-container>
   </div>
-
-```html
-
-<div class="common-layout">
-    <ca-container>
-      <ca-aside width="200px">Aside</ca-aside>
-      <ca-main>Main</ca-main>
-    </ca-container>
-  </div>
+</div>
 ```
 
-<hr>
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
 
  <div class="common-layout">
     <ca-container>
@@ -85,21 +81,15 @@
       </ca-container>
     </ca-container>
   </div>
-
-```html
-
- <div class="common-layout">
-    <ca-container>
-      <ca-header>Header</ca-header>
-      <ca-container>
-        <ca-aside width="200px">Aside</ca-aside>
-        <ca-main>Main</ca-main>
-      </ca-container>
-    </ca-container>
-  </div>
+</div>
 ```
-<hr>
 
+
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
 
 <div class="common-layout">
     <ca-container>
@@ -113,24 +103,15 @@
       </ca-container>
     </ca-container>
   </div>
-
-
-```html
-<div class="common-layout">
-    <ca-container>
-      <ca-header>Header</ca-header>
-      <ca-container>
-        <ca-aside width="200px">Aside</ca-aside>
-        <ca-container>
-          <ca-main>Main</ca-main>
-          <ca-footer>Footer</ca-footer>
-        </ca-container>
-      </ca-container>
-    </ca-container>
-  </div>
+</div>
 ```
-<hr>
 
+
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
 <div class="common-layout">
     <ca-container>
       <ca-aside width="200px">Aside</ca-aside>
@@ -140,22 +121,15 @@
       </ca-container>
     </ca-container>
   </div>
-
-
-```html
-<div class="common-layout">
-    <ca-container>
-      <ca-aside width="200px">Aside</ca-aside>
-      <ca-container>
-        <ca-header>Header</ca-header>
-        <ca-main>Main</ca-main>
-      </ca-container>
-    </ca-container>
-  </div>
+</div>
 ```
 
 
-<hr>
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
 <div class="common-layout">
     <ca-container>
       <ca-aside width="200px">Aside</ca-aside>
@@ -166,20 +140,7 @@
       </ca-container>
     </ca-container>
   </div>
-
-
-```html
-
-<div class="common-layout">
-    <ca-container>
-      <ca-aside width="200px">Aside</ca-aside>
-      <ca-container>
-        <ca-header>Header</ca-header>
-        <ca-main>Main</ca-main>
-        <ca-footer>Footer</ca-footer>
-      </ca-container>
-    </ca-container>
-  </div>
+</div>
 ```
 
 

@@ -7,7 +7,7 @@ import { useNamespace, } from '../../hook/'
   styleUrl: '../../scss/button.scss',
   shadow: false,
 })
-export class CaButton {
+export class Button {
 
   @Prop() type: string;
 

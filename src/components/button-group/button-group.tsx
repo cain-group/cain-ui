@@ -1,5 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import { useNamespace, } from '../../hook/'
+import { useNamespace, } from '../../hook'
 @Component({
   tag: 'ca-button-group',
   styleUrl: '../../scss/button-group.scss',

@@ -6,8 +6,13 @@
 
 
 使用 `type`、`plain`、`round` 和 `circle` 来定义按钮的样式。
-<!-- Auto Generated Bcaow -->
 
+
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
   <ca-row class="mb-4">
     <ca-button>Default</ca-button>
     <ca-button type="primary">Primary</ca-button>
@@ -35,37 +40,7 @@
     <ca-button type="warning" round>Warning</ca-button>
     <ca-button type="danger" round>Danger</ca-button>
   </ca-row>
-
-
-```html
-
- <ca-row class="mb-4">
-    <ca-button>Default</ca-button>
-    <ca-button type="primary">Primary</ca-button>
-    <ca-button type="success">Success</ca-button>
-    <ca-button type="info">Info</ca-button>
-    <ca-button type="warning">Warning</ca-button>
-    <ca-button type="danger">Danger</ca-button>
-    <ca-button>中文</ca-button>
-  </ca-row>
-
-  <ca-row class="mb-4">
-    <ca-button plain>Plain</ca-button>
-    <ca-button type="primary" plain>Primary</ca-button>
-    <ca-button type="success" plain>Success</ca-button>
-    <ca-button type="info" plain>Info</ca-button>
-    <ca-button type="warning" plain>Warning</ca-button>
-    <ca-button type="danger" plain>Danger</ca-button>
-  </ca-row>
-
-  <ca-row class="mb-4">
-    <ca-button round>Round</ca-button>
-    <ca-button type="primary" round>Primary</ca-button>
-    <ca-button type="success" round>Success</ca-button>
-    <ca-button type="info" round>Info</ca-button>
-    <ca-button type="warning" round>Warning</ca-button>
-    <ca-button type="danger" round>Danger</ca-button>
-  </ca-row>
+</div>
   
 ```
 
@@ -77,6 +52,11 @@
 
 使用 `disabled` 属性来控制按钮是否为禁用状态。 该属性接受一个 `Boolean` 类型的值。
 
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
  <ca-row class="mb-4">
     <ca-button disabled>Default</ca-button>
     <ca-button type="primary" disabled>Primary</ca-button>
@@ -94,37 +74,21 @@
     <ca-button type="warning" plain disabled>Warning</ca-button>
     <ca-button type="danger" plain disabled>Danger</ca-button>
   </ca-row>
-
-```html
- <ca-row class="mb-4">
-    <ca-button disabled>Default</ca-button>
-    <ca-button type="primary" disabled>Primary</ca-button>
-    <ca-button type="success" disabled>Success</ca-button>
-    <ca-button type="info" disabled>Info</ca-button>
-    <ca-button type="warning" disabled>Warning</ca-button>
-    <ca-button type="danger" disabled>Danger</ca-button>
-  </ca-row>
-
-  <ca-row>
-    <ca-button plain disabled>Plain</ca-button>
-    <ca-button type="primary" plain disabled>Primary</ca-button>
-    <ca-button type="success" plain disabled>Success</ca-button>
-    <ca-button type="info" plain disabled>Info</ca-button>
-    <ca-button type="warning" plain disabled>Warning</ca-button>
-    <ca-button type="danger" plain disabled>Danger</ca-button>
-  </ca-row>
+</div>
 ```
 
 ## 文字按钮
 
 没有边框和背景色的按钮。
 
- <ca-button type="text">Text Button</ca-button>
- <ca-button type="text" disabled>Text Button</ca-button>
+```jsx
+import React from 'react';
 
-```html
-<ca-button type="text">Text Button</ca-button>
-<ca-button type="text" disabled>Text Button</ca-button>
+export default () =>  
+<div>
+  <ca-button type="text">Text Button</ca-button>
+  <ca-button type="text" disabled>Text Button</ca-button>
+</div>
 ```
 
 ## 图标按钮
@@ -138,20 +102,19 @@
 
 使用标签 `<ca-button-group>` 来给按钮分组。
 
- <ca-button-group>
-    <ca-button type="primary" >Previous Page</ca-button>
-    <ca-button type="primary">
-      Next Page
-    </ca-button>
-  </ca-button-group>
+```jsx
+import React from 'react';
 
-```html
+export default () =>  
+<div>
  <ca-button-group>
     <ca-button type="primary" >Previous Page</ca-button>
     <ca-button type="primary">
       Next Page
     </ca-button>
   </ca-button-group>
+</div>
+
 ```
 
 ## 加载中
@@ -160,10 +123,15 @@
 
 通过设置 `loading` 属性为 `true` 来显示加载中状态。
 
- <ca-button type="primary" loading>Loading</ca-button>
+```jsx
+import React from 'react';
 
-```html
-<ca-button type="primary" loading>Loading</ca-button>
+export default () =>  
+<div>
+  <ca-button type="primary" loading>Loading</ca-button>
+
+</div>
+
 ```
 
 
@@ -173,18 +141,11 @@
 
 使用 `size` 属性额外配置尺寸，可使用 `large` 和 `small` 两种值。
 
-  <ca-row>
-    <ca-button size="large">Large</ca-button>
-    <ca-button>Default</ca-button>
-    <ca-button size="small">Small</ca-button>
-  </ca-row>
-    <ca-row class="my-4">
-    <ca-button size="large" round>Large</ca-button>
-    <ca-button round>Default</ca-button>
-    <ca-button size="small" round>Small</ca-button>
-  </ca-row>
+```jsx
+import React from 'react';
 
-```html
+export default () =>  
+<div>
  <ca-row>
     <ca-button size="large">Large</ca-button>
     <ca-button>Default</ca-button>
@@ -195,6 +156,8 @@
     <ca-button round>Default</ca-button>
     <ca-button size="small" round>Small</ca-button>
   </ca-row>
+</div>
+
 ```
 
 ## 自定义颜色

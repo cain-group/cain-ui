@@ -11,38 +11,11 @@
 使用列创建基础网格布局。
 
 通过 `row` 和 `col` 组件，并通过 `col` 组件的 `span` 属性我们就可以自由地组合布局。
+```jsx
+import React from 'react';
 
-<ca-row>
-    <ca-col span="24"><div class="grid-content bg-purple-dark" ></div></ca-col>
-  </ca-row>
-  <ca-row>
-    <ca-col span="12"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="12"><div class="grid-content bg-purple-light" ></div></ca-col>
-  </ca-row>
-  <ca-row>
-    <ca-col span="8"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="8"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="8"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-  </ca-row>
-  <ca-row>
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple-light" ></div></ca-col>
-  </ca-row>
-
-
-  ```html
-
-  
+export default () =>  
+<div>
 <ca-row>
     <ca-col span="24"><div class="grid-content bg-purple-dark" ></div></ca-col>
   </ca-row>
@@ -70,7 +43,8 @@
     <ca-col span="4"><div class="grid-content bg-purple-light" ></div></ca-col>
   </ca-row>
   
-  ```
+</div>
+```
 
 ## 分栏间隔
 
@@ -78,43 +52,30 @@
 
 行提供 `gutter` 属性来指定列之间的间距，其默认值为0。
 
- <ca-row gutter="20">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
 
-```html
+```jsx
+import React from 'react';
+
+export default () =>  
+<div>
  <ca-row gutter="20">
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
   </ca-row>
+</div>
 ```
 
 ## 混合布局
 
 通过基础的 1/24 分栏任意扩展组合形成较为复杂的混合布局。
 
-<ca-row gutter="20">
-    <ca-col span="16"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="8"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row gutter="20">
-    <ca-col span="8"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="8"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row gutter="20">
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="16"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
+```jsx
+import React from 'react';
 
-  ```html
+export default () =>  
+<div>
 
   <ca-row gutter="20">
     <ca-col span="16"><div class="grid-content bg-purple" ></div></ca-col>
@@ -131,7 +92,8 @@
     <ca-col span="16"><div class="grid-content bg-purple" ></div></ca-col>
     <ca-col span="4"><div class="grid-content bg-purple" ></div></ca-col>
   </ca-row>
-  ```
+</div>
+```
 
 
 ## 列偏移
@@ -140,29 +102,12 @@
 
 通过制定 `col` 组件的 `offset` 属性可以指定分栏偏移的栏数。
 
- <ca-row gutter="20">
-    <ca-col span="6">
-        <div class="grid-content bg-purple" ></div>
-    </ca-col>
-    <ca-col span="6" offset="6">
-        <div class="grid-content bg-purple"></div>
-    </ca-col>
-  </ca-row>
-  <ca-row gutter="20">
-    <ca-col span="6" offset="6">
-        <div class="grid-content bg-purple"></div>
-    </ca-col>
-    <ca-col span="6" offset="6"
-      ><div class="grid-content bg-purple"
-    ></div></ca-col>
-  </ca-row>
-  <ca-row gutter="20">
-    <ca-col span="12" offset="6"
-      ><div class="grid-content bg-purple"
-    ></div></ca-col>
-  </ca-row>
+```jsx
+import React from 'react';
 
-```html
+export default () =>  
+<div>
+
  <ca-row gutter="20">
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
     <ca-col span="6" offset="6"
@@ -182,6 +127,7 @@
       ><div class="grid-content bg-purple"
     ></div></ca-col>
   </ca-row>
+</div>
 ```
 
 
@@ -191,38 +137,11 @@
 
 您可以通过使用 start、center、end、space-between、space-around 或 space-evenly 设置 `justify` 属性来定义子元素的布局。
 
- <ca-row class="row-bg">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row class="row-bg" justify="center">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row class="row-bg" justify="end">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row class="row-bg" justify="space-between">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row class="row-bg" justify="space-around">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
-  <ca-row class="row-bg" justify="space-evenly">
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple-light" ></div></ca-col>
-    <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
-  </ca-row>
+```jsx
+import React from 'react';
 
-  ```html
+export default () =>  
+<div>
 
    <ca-row class="row-bg">
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
@@ -255,7 +174,8 @@
     <ca-col span="6"><div class="grid-content bg-purple" ></div></ca-col>
   </ca-row>
 
-  ```
+</div>
+```
 
 
 
@@ -263,24 +183,11 @@
 
   参照了 Bootstrap 的 响应式设计，预设了五个响应尺寸：xs、sm、md、lg 和 xl。
 
-  <ca-row gutter="10">
-    <ca-col xs="8" sm="6" md="4" lg="3" xl="1">
-    <div class="grid-content bg-purple"
-    ></div>
-  </ca-col>
-    <ca-col xs="4" sm="6" md="8" lg="9" xl="11"
-      ><div class="grid-content bg-purple-light"
-    ></div></ca-col>
-    <ca-col xs="4" sm="6" md="8" lg="9" xl="11"
-      ><div class="grid-content bg-purple"
-    ></div></ca-col>
-    <ca-col xs="8" sm="6" md="4" lg="3" xl="1" 
-      ><div class="grid-content bg-purple-light"
-    ></div></ca-col>
-  </ca-row>
+```jsx
+import React from 'react';
 
-
-  ```html
+export default () =>  
+<div>
 
   <ca-row gutter="10">
     <ca-col xs="8" sm="6" md="4" lg="3" xl="1"
@@ -296,8 +203,8 @@
       ><div class="grid-content bg-purple-light"
     ></div></ca-col>
   </ca-row>
-
-  ```
+</div>
+```
 
 
   ## 基于断点的隐藏类

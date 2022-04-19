@@ -63,7 +63,6 @@ export class CaCol {
 
     const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 
-    console.log(this)
 
     sizes.forEach((size) => {
       if (typeof this[size] === 'number') {

@@ -65,7 +65,7 @@ https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
 - Container 布局容器 ✔
 - Icon 图标 ❌
 - Layout 布局 ✔
-- Link 链接 💤
+- Link 链接  ✔
 - Scrollbar 滚动条 💤
 - Space 间距 💤
 - Typography 排版 💤

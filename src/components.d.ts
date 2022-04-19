@@ -53,20 +53,6 @@ export namespace Components {
         "gutter": number;
         "justify": 'start' | 'center' | 'end' | 'space-around' | 'space-between' | 'space-evenly';
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
 }
 declare global {
     interface HTMLCaAsideElement extends Components.CaAside, HTMLStencilElement {
@@ -129,12 +115,6 @@ declare global {
         prototype: HTMLCaRowElement;
         new (): HTMLCaRowElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "ca-aside": HTMLCaAsideElement;
         "ca-button": HTMLCaButtonElement;
@@ -146,7 +126,6 @@ declare global {
         "ca-icon": HTMLCaIconElement;
         "ca-main": HTMLCaMainElement;
         "ca-row": HTMLCaRowElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -197,20 +176,6 @@ declare namespace LocalJSX {
         "gutter"?: number;
         "justify"?: 'start' | 'center' | 'end' | 'space-around' | 'space-between' | 'space-evenly';
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface IntrinsicElements {
         "ca-aside": CaAside;
         "ca-button": CaButton;
@@ -222,7 +187,6 @@ declare namespace LocalJSX {
         "ca-icon": CaIcon;
         "ca-main": CaMain;
         "ca-row": CaRow;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -239,7 +203,6 @@ declare module "@stencil/core" {
             "ca-icon": LocalJSX.CaIcon & JSXBase.HTMLAttributes<HTMLCaIconElement>;
             "ca-main": LocalJSX.CaMain & JSXBase.HTMLAttributes<HTMLCaMainElement>;
             "ca-row": LocalJSX.CaRow & JSXBase.HTMLAttributes<HTMLCaRowElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
