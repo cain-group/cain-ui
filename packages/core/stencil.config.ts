@@ -18,28 +18,29 @@ export const config: Config = {
     }),
   ],
   outputTargets: [
-    // reactOutputTarget({
-    //   componentCorePackage: '@cain-group/cain-ui',
-    //   proxiesFile: './warpper/react/src/components.ts',
-    //   loaderDir: 'dist/loader',
-    // }),
+    reactOutputTarget({
+      componentCorePackage: '@cain-group/cain-ui',
+      proxiesFile: '../react/src/components.ts',
+      loaderDir: 'dist/loader',
+    }),
 
-    // angularOutputTarget({
-    //   componentCorePackage: '@cain-group/cain-ui',
-    //   directivesProxyFile: './warpper/angular/src/directives/proxies.ts',
-    // }),
+    angularOutputTarget({
+      componentCorePackage: '@cain-group/cain-ui',
+      directivesProxyFile: '../angular/src/directives/proxies.ts',
+      directivesArrayFile: '../angular/src/index.ts',
+    }),
     vueOutputTarget({
       componentCorePackage: '@cain-group/cain-ui',
-      proxiesFile: './warpper/vue/src/components.ts',
+      proxiesFile: '../vue/src/components.ts',
     }),
-    // svelteOutputTarget({
-    //   accessors: true,
-    //   componentCorePackage: '@cain-group/cain-ui',
-    //   proxiesFile: './warpper/svelte/src/proxies.ts',
-    // }),
+    svelteOutputTarget({
+      accessors: true,
+      componentCorePackage: '@cain-group/cain-ui',
+      proxiesFile: '../svelte/src/proxies.ts',
+    }),
     {
       type: 'dist',
-      esmLoaderPath: './warpper/loader',
+      esmLoaderPath: '../loader',
     },
     {
       type: 'dist-custom-elements',

@@ -1,5 +1,5 @@
 
-import * as d from './directives/proxies';
+import * as d from './proxies';
 
 export const DIRECTIVES = [
   d.CaAside,

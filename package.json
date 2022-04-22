@@ -4,10 +4,12 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "turbo run build --stream",
+    "publish":"lerna publish --no-commit-hooks --dist-tag latest",
     "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "turbo": "^1.2.5"
   }
- 
 }
