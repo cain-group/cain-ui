@@ -1,5 +1,5 @@
 export default  [
-    { title: '概述', path: '/components' },
+    { title: '开始', path: '/components' },
     {
         title:'Basic 基础组件',
         children: [

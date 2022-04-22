@@ -14,7 +14,6 @@
   <a href="https://github.com/element-plus/element-plus">
     <img src="https://img.shields.io/badge/Design%20by-Element%20Plus-blue">
   </a>  &nbsp;
-
   <a href="https://www.npmjs.org/package/@cain-group/cain-ui">
     <img src="https://img.shields.io/npm/v/@cain-group/cain-ui.svg">
   </a> &nbsp;
