@@ -1,26 +1,22 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
+    "alwaysStrict": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es2017"
-    ],
-    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "es2017"],
+    "jsxFactory": "h",
+    "jsx": "react",
     "module": "esnext",
+    "moduleResolution": "node",
     "target": "es2017",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "jsx": "react",
-    "jsxFactory": "h"
+    "noImplicitReturns": true,
+    "skipLibCheck": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["packages/**/*.ts", "packages/**/*.tsx"],
+  "exclude": ["node_modules"]
 }

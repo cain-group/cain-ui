@@ -1,0 +1,63 @@
+{
+  "name": "@cain-group/cain-ui-vue",
+  "sideEffects": false,
+  "version": "0.0.1",
+  "author": "cain-group",
+  "license": "MIT",
+  "description": "Vue specific wrapper for Cain UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cain-group/cain-ui.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "test": "echo 'vue: no tests yet'",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module es6 --outDir dist/esm",
+    "clean": "rimraf dist"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.3",
+    "@types/jest": "27.4.1",
+    "@types/tapable": "2.2.2",
+    "@types/webpack": "5.28.0",
+    "@vue/test-utils": "^1.3.0",
+    "jest": "27.5.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tapable": "2.2.1",
+    "ts-jest": "^27.1.4",
+    "typescript": "4.6.3",
+    "vue": "^2.6.14",
+    "vue-class-component": "^7.2.6",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "dependencies": {
+    "@cain-group/cain-ui": "0.0.1"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.12"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.ts"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "dist"
+    ]
+  }
+}
