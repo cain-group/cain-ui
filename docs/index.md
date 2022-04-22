@@ -13,10 +13,10 @@ hero :
 <style>
     .__dumi-default-layout-hero{
         background: #fff;
-        background: url(http://localhost:7001/static/images/loginBg.png);
+        background: url(https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/bg.png);
     }
     .__dumi-default-layout{
-        background: url(http://localhost:7001/static/images/loginBg.png);
+        background: url(https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/bg.png);
 
     }
 </style>
