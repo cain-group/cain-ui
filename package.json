@@ -7,12 +7,12 @@
     "bootstrap": "lerna bootstrap",
     "commit": "git cz"
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "commitizen": "^4.2.4",
     "commitlint-config-cz": "^0.13.3",
     "cz-customizable": "^6.3.0",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "yorkie": "^2.0.0"
   },
