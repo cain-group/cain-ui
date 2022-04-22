@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
-import headScripts from './um-docs/build/headScripts.js'
-import componentMenus from './um-docs/menus.js'
+import headScripts from './docs/build/headScripts.js'
+import componentMenus from './docs/menus.js'
 
 const repo = 'cain-ui';
 
@@ -12,7 +12,7 @@ export default defineConfig({
     'https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/logo.png',
   logo:
     'https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/logo.png',
-  outputPath: 'docs',
+  outputPath: 'docs-dist',
   mode: 'site',
   hash: true,
   // Because of using GitHub Pages
@@ -22,7 +22,7 @@ export default defineConfig({
     { from: '/www/build', to: 'build' },
   ],
   resolve:{
-    includes:['um-docs']
+    includes:['docs']
   },
   headScripts,
   menus: {
