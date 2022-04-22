@@ -1,7 +1,7 @@
 {
   "name": "@cain-group/cain-ui-vue",
   "sideEffects": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "cain-group",
   "license": "MIT",
   "description": "Vue specific wrapper for Cain UI",
@@ -45,7 +45,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "dependencies": {
-    "@cain-group/cain-ui": "0.0.2"
+    "@cain-group/cain-ui": "0.0.3"
   },
   "peerDependencies": {
     "vue": "^2.6.12"

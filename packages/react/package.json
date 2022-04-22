@@ -1,7 +1,7 @@
 {
   "name": "@cain-group/cain-ui-react",
   "sideEffects": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "cain-group",
   "license": "MIT",
   "description": "React specific wrapper for Cain UI",
@@ -42,7 +42,7 @@
     "typescript": "4.6.3"
   },
   "dependencies": {
-    "@cain-group/cain-ui": "0.0.2"
+    "@cain-group/cain-ui": "0.0.3"
   },
   "peerDependencies": {
     "react": "^16.12.0",
