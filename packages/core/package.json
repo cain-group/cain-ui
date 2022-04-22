@@ -45,7 +45,8 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "release": "standard-version"
+    "release": "standard-version",
+    "commit": "git cz"
   },
   "dependencies": {},
   "devDependencies": {
