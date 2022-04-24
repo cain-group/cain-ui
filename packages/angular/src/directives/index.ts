@@ -1,16 +1,6 @@
+// DIRECTIVES
+export * from './proxies';
 
-import * as d from './proxies';
+// PACKAGE MODULE
+export { CainUIModule } from './cain-ui-module';
 
-export const DIRECTIVES = [
-  d.CaAside,
-  d.CaButton,
-  d.CaButtonGroup,
-  d.CaCol,
-  d.CaContainer,
-  d.CaFooter,
-  d.CaHeader,
-  d.CaIcon,
-  d.CaLink,
-  d.CaMain,
-  d.CaRow
-];

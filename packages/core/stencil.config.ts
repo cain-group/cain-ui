@@ -27,7 +27,7 @@ export const config: Config = {
     angularOutputTarget({
       componentCorePackage: '@cain-group/cain-ui',
       directivesProxyFile: '../angular/src/directives/proxies.ts',
-      directivesArrayFile: '../angular/src/index.ts',
+      // directivesArrayFile: '../angular/src/index.ts',
     }),
     vueOutputTarget({
       componentCorePackage: '@cain-group/cain-ui',

@@ -38,16 +38,39 @@ https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
 
 # 安装
  
-待补充
+```bash
+# Using npm
+npm i @cain-group/cain-ui
+
+# Using yarn
+yarn add @cain-group/cain-ui
+
+```
+
+# 使用
+
+## HTML 环境
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/cain-ui/cain-ui.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/cain-ui/cain-ui.esm.js"></script>
+  </head>
+  <body>
+    <ca-button type="primary">Future</ca-button>
+  </body>
+</html>
+```
+
+## Vue 环境
+
+
 
 # 引入
  
 待补充
-
-# 使用
- 
-待补充
-
 
 # TODO
 

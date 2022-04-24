@@ -6,7 +6,7 @@ hero :
     title : Cain UI
     desc : 面向未来的原生 web components UI组件库
     actions : 
-        - text: Getting Started
+        - text: 走起来
           link: /components/
 ---
 
