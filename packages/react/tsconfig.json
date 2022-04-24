@@ -3,7 +3,6 @@
     "allowUnreachableCode": false,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "declarationDir": "dist/types",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
@@ -21,8 +20,13 @@
     "jsx": "react",
     "target": "es2015"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["**/__tests__/**"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "**/__tests__/**"
+  ],
   "compileOnSave": false,
   "buildOnSave": false
 }

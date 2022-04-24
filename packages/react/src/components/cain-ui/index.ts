@@ -5,8 +5,9 @@ import { createReactComponent } from './react-component-lib';
 
 import type { JSX } from '@cain-group/cain-ui';
 
+import { defineCustomElements } from '@cain-group/cain-ui/loader';
 
-
+defineCustomElements();
 export const CaAside = /*@__PURE__*/createReactComponent<JSX.CaAside, HTMLCaAsideElement>('ca-aside');
 export const CaButton = /*@__PURE__*/createReactComponent<JSX.CaButton, HTMLCaButtonElement>('ca-button');
 export const CaButtonGroup = /*@__PURE__*/createReactComponent<JSX.CaButtonGroup, HTMLCaButtonGroupElement>('ca-button-group');

@@ -23,8 +23,9 @@
     "declarationDir": "dist/types",
     "inlineSources": true
   },
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "compileOnSave": false,
   "buildOnSave": false,
-  "exclude": ["node_modules/**"]
+  "exclude": ["./__tests__/**", "node_modules", "setupTests.ts"],
+
 }

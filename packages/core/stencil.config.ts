@@ -20,8 +20,10 @@ export const config: Config = {
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@cain-group/cain-ui',
-      proxiesFile: '../react/src/components.ts',
-      loaderDir: 'dist/loader',
+      // proxiesFile: '../react2/src/components.ts',
+      proxiesFile: '../react/src/components/cain-ui/index.ts',
+      loaderDir: 'loader',
+      includeDefineCustomElements: true,
     }),
 
     angularOutputTarget({
@@ -44,10 +46,11 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      dir: "./dist/custom-elements"
     },
-    {
-      type: 'docs-readme',
-    },
+    // {
+    //   type: 'docs-readme',
+    // },
     {
       type: 'www',
       serviceWorker: null, // disable service workers
