@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { defineCustomElements } from '@cain-group/cain-ui/loader';
 
-import * as d from './proxies';
+import * as d from './directives/proxies';
 
 const CaComponents = [
   d.CaAside,
