@@ -1,7 +1,7 @@
 {
   "name": "@cain-group/cain-ui-react",
   "sideEffects": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "cain-group",
   "license": "MIT",
   "description": "React specific wrapper for Cain UI",
