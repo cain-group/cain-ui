@@ -1,6 +1,6 @@
 {
   "name": "@cain-group/cain-ui-angular",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "cain-group",
   "license": "MIT",
   "description": "Angular specific wrapper for Cain UI",
@@ -20,7 +20,7 @@
   },
   "types": "dist/index.d.ts",
   "dependencies": {
-    "@cain-group/cain-ui": "0.0.4",
+    "@cain-group/cain-ui": "0.0.5",
     "tslib": "^2.2.0"
   },
   "peerDependencies": {
