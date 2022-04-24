@@ -10,7 +10,7 @@ import autoprefixer from 'autoprefixer';
 export const config: Config = {
   namespace: 'cain-ui',
   // globalStyle:'src/global/app.css',
-  globalStyle:'src/scss/base.scss',
+  globalStyle:'src/scss/index.scss',
   plugins: [
     sass({}),
     postcss({

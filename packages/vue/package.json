@@ -15,17 +15,17 @@
   },
   "scripts": {
     "test": "echo 'vue: no tests yet'",
-    "build2": "npm run clean && npm run build:cjs && npm run build:esm",
-    "build": "npm run clean && npm run compile",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "buil3d": "npm run clean && npm run compile",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc --module es6 --outDir dist/esm",
     "compile": "npm run tsc",
     "clean": "rimraf dist",
-    "tsc": "tsc -p ."
+    "tsc": "tsc -p"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
