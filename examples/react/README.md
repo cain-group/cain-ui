@@ -6,7 +6,7 @@
 ```bash
 $: git clone https://github.com/cain-group/cain-ui.git
 
-$: cd cain-ui/react/html
+$: cd cain-ui/examples/react
 
 $: yarn
 

@@ -6,7 +6,7 @@ import { applyPolyfills, defineCustomElements } from '@cain-group/cain-ui/loader
 
 applyPolyfills().then(() => {
     defineCustomElements();
-  });
+});
   
 
 createApp(App).mount('#app')
