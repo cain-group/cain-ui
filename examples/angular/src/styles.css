@@ -1,0 +1,8 @@
+/* Default theme. */
+@import '~@cain-group/cain-ui/dist/cain-ui/cain-ui.css';
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
