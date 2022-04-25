@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build --stream",
+    "build": "turbo run build",
     "release":"lerna publish --no-commit-hooks --dist-tag latest",
     "bootstrap": "lerna bootstrap"
   },

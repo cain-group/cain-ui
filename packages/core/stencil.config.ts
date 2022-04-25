@@ -20,9 +20,12 @@ export const config: Config = {
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: '@cain-group/cain-ui',
+      //       proxiesFile: '../component-library-react/src/components.ts',
+
       // proxiesFile: '../react2/src/components.ts',
       proxiesFile: '../react/src/components/cain-ui/index.ts',
       loaderDir: 'loader',
+      // customElementsDir:'@cain-group/cain-ui/dist/types/components',
       includeDefineCustomElements: true,
     }),
 
