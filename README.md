@@ -49,7 +49,7 @@ yarn add @cain-group/cain-ui
 
 # 使用
 
-## HTML 环境
+## HTML 环境 
 
 ```html
 <!DOCTYPE html>
