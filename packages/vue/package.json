@@ -19,16 +19,12 @@
     "build2": "npm run clean && npm run compile",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc --module es6 --outDir dist/esm",
-    "compile": "npm run tsc",
-    "clean": "rimraf dist",
-    "tsc": "tsc -p ."
+    "build:types": "tsc",
+    "clean": "rimraf dist"
   },
-  "main2": "dist/cjs/index.js",
-  "module2": "dist/esm/index.js",
-  "types2": "dist/types/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -44,9 +40,6 @@
   },
   "dependencies": {
     "@cain-group/cain-ui": "0.0.7"
-  },
-  "peerDependencies": {
-    "vue": "^2.6.12"
   },
   "jest": {
     "preset": "ts-jest",
