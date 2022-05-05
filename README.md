@@ -182,7 +182,7 @@ applyPolyfills().then(() => {
 - Icon 图标 ❌
 - Layout 布局 ✔
 - Link 链接  ✔
-- Scrollbar 滚动条 💤
+- Scrollbar 滚动条 ❌
 - Space 间距 💤
 - Typography 排版 💤
 

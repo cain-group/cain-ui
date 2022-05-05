@@ -22,7 +22,8 @@ export default defineConfig({
     { from: '/www/build', to: 'build' },
   ],
   resolve:{
-    includes:['docs']
+    includes:['docs'],
+    // previewLangs:['jsx', 'tsx']
   },
   headScripts,
   menus: {

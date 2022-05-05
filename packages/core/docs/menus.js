@@ -10,6 +10,25 @@ export default  [
             { title: 'Icon 图标', path: '/components/icon' },
             { title: 'Layout 布局', path: '/components/layout' },
             { title: 'Link 链接', path: '/components/link' },
+            { title: 'Scrollbar 滚动条', path: '/components/scrollbar' },
+            { title: 'Space 间距', path: '/components/space' },
         ]
     },
+    {
+        title:'Config 配置组件',
+        children: [
+            { title: 'Config Provider 全局配置', path: '/components/config-provider' },
+        ]
+    },
+    {
+        title:'Form 表单组件',
+        children: [
+            { title: 'Cascader 级联选择器', path: '/components/cascader' },
+            { title: 'Checkbox 多选框', path: '/components/checkbox' },
+
+            
+        ]
+    },
+
+    
   ];

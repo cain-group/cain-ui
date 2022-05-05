@@ -1,3 +1,17 @@
+# 开始之前
+ 
+此文档 由`dumi` 撰写，文档中存在大量的`React`依赖，`请无视`，如以下代码 ：
+
+```jsx
+import React from 'react';
+
+export default () =>  
+  <div>
+    请大家只需关注div中的代码即可
+  </div>
+  
+```
+
 # 安装
  
 ```bash
@@ -34,7 +48,7 @@ yarn add @cain-group/cain-ui
 
 1. 引入Css内容
 
-```tsx
+```javascript
 import '@cain-group/cain-ui/dist/cain-ui/cain-ui.css';
 ```
 
@@ -49,7 +63,7 @@ npm i @cain-group/cain-ui-react
 yarn add @cain-group/cain-ui-react
 ```
 3. 使用
-```tsx
+```javascript
   import {  CaButton } from '@cain-group/cain-ui-react';
 ```
 
@@ -60,7 +74,7 @@ yarn add @cain-group/cain-ui-react
 
 1. 引入Css内容
 
-```tsx
+```javascript
 import '@cain-group/cain-ui/dist/cain-ui/cain-ui.css';
 ```
 
@@ -75,7 +89,8 @@ npm i @cain-group/cain-ui-angular
 yarn add @cain-group/cain-ui-angular
 ```
 3. 使用
-```tsx
+```javascript
+
   import { CainUIModule } from '@cain-group/cain-ui-angular/dist';
   ...
   imports: [
@@ -92,7 +107,7 @@ yarn add @cain-group/cain-ui-angular
 
 1. 引入Css内容
 
-```tsx
+```javascript
 import '@cain-group/cain-ui/dist/cain-ui/cain-ui.css';
 ```
 
@@ -101,7 +116,7 @@ import '@cain-group/cain-ui/dist/cain-ui/cain-ui.css';
 
 main.js
 
-```js
+```javascript
 
 import '@cain-group/cain-ui/dist/cain-ui/cain-ui.css';
 import { applyPolyfills, defineCustomElements } from '@cain-group/cain-ui/loader';
@@ -113,7 +128,7 @@ applyPolyfills().then(() => {
   
 ```
 3. 使用
-```tsx
+```javascript
    <ca-button type="success">This is Future</ca-button>
 ```
 

@@ -27,12 +27,4 @@
 - 🔥 TypeScript编写
 - 😍 适用于Vue、React、Angular 等任何框架
 - 💎 基于Element-Plus(2.1.9)设计
-<!-- 
-https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/index.js
-
-
-
-    <script type="module" src="https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/cain-ui/cain-ui.esm.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@cain-group/cain-ui/dist/cain-ui/cain-ui.css"> -->
 
