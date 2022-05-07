@@ -23,7 +23,7 @@ export default defineConfig({
   ],
   resolve:{
     includes:['docs'],
-    // previewLangs:['jsx', 'tsx']
+    // previewLangs:['jsx', 'tsx'],
   },
   headScripts,
   menus: {

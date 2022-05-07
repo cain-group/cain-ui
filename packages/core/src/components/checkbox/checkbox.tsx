@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Element, State, } from '@stencil/core';
+import { Component, Host, h, Prop, Element, State,Event, EventEmitter } from '@stencil/core';
 import { useNamespace, } from '../../hook'
 
 @Component({
@@ -16,6 +16,8 @@ export class Checkbox {
 
   @Prop() disabled: boolean;
 
+  @Prop() disabledByFahter: boolean;
+
   @Prop() checked: boolean = false;
 
   @Prop() name: string = undefined;
@@ -28,10 +30,6 @@ export class Checkbox {
 
   @Prop() size: string;
 
-  @Prop() min: [string, number];
-
-  @Prop() max: [string, number];
-
   @Prop() tabindex: number;
 
   @State() focus: boolean = false;
@@ -41,7 +39,12 @@ export class Checkbox {
 
 
 
-
+  @Event({
+    eventName: 'checkboxChange',
+    composed: true,
+    cancelable: true,
+    bubbles: true,
+  }) checkboxChange: EventEmitter;
 
   // @Event() click: EventEmitter<Event>;
 
@@ -57,8 +60,8 @@ export class Checkbox {
   // }
 
   getCheckboxSize(): string {
-    // isGroup.value ? checkboxGroup?.checkboxGroupSize?.value : undefined
-    return this.size
+    const fatherItem = this.el.parentElement
+    return this.size || fatherItem.getAttribute('size') || ''
   }
 
   getIsDisabled(): boolean {
@@ -80,7 +83,41 @@ export class Checkbox {
     //       : props.disabled || elForm.disabled) ?? false
     //   )
     // })
-    return this.disabled
+   
+
+    const fatherItem = this.el.parentElement
+
+    let max = +Infinity
+    let min = -Infinity
+    if (fatherItem.getAttribute('max') !== null) {
+      max = +fatherItem.getAttribute('max')
+    }
+    if (fatherItem.getAttribute('min') !== null) {
+      min = +fatherItem.getAttribute('min')
+    }
+
+    //   return (
+    //     (!!(max || min) && model.value.length >= max && !isChecked.value) ||
+    //     (model.value.length <= min && isChecked.value)
+    //   )
+
+    // 
+    // const list = Array.from(fatherItem.children).filter((item: HTMLInputElement) => {
+    //   return item.checked
+    // })
+    // let maxMinDisabled = false
+
+    // const isChecked =   this.getIsChecked()
+
+    // if(list.length>=max && !isChecked){
+    //   maxMinDisabled = true
+    // }
+
+    // console.log('getIsDisabled',maxMinDisabled)
+
+    const fDisabled = fatherItem.getAttribute('disabled')
+
+    return  this.disabled || (fDisabled && fDisabled !== 'false') || this.disabledByFahter
 
   }
 
@@ -123,7 +160,7 @@ export class Checkbox {
     const checkboxSize = this.getCheckboxSize()
     const isDisabled = this.getIsDisabled()
     const isChecked = this.getIsChecked();
-    console.log('getHostClass', isChecked)
+    // console.log('getHostClass')
     return [
       this.ns.b(),
       this.ns.m(checkboxSize),
@@ -139,8 +176,8 @@ export class Checkbox {
 
     const isDisabled = this.getIsDisabled()
     const isChecked = this.getIsChecked();
+    // console.log('getSpanClass')
 
-    console.log('getSpanClass', isChecked)
 
     return [
       this.ns.e('input'),
@@ -151,35 +188,24 @@ export class Checkbox {
     ].join(' ')
   }
 
-
-  emitClick(e: MouseEvent) {
-    console.log(e)
-    // this.click.emit(e)
-  }
   handlerChange(e: InputEvent) {
-    // console.log(e.target.checked)
 
 
     // if (isLimitExceeded.value) return
     const target = e.target as HTMLInputElement
-    console.log(target.checked)
     // const value = target.checked
     //   ? this.trueLabel ?? true
     //   : this.falseLabel ?? false
     // this.value = `${value}` 
 
+
     this.checked = target.checked
 
-
+    this.checkboxChange.emit(target.checked)
 
   }
 
   getInputDom() {
-    // :tabindex="tabindex"
-    //     :
-    //     :true-value="trueLabel"
-    //     :false-value="falseLabel"
-    //     @change=    )
 
     const isDisabled = this.getIsDisabled()
     const isChecked = this.getIsChecked();
@@ -200,59 +226,30 @@ export class Checkbox {
   }
 
   getLableSlot() {
-
-
-    // <span v-if="$slots.default || label" :class="ns.e('label')">
-    //   <slot />
-    //   <template v-if="!$slots.default">{{ label }}</template>
-    // </span>
-
-    // console.log(this.label, this.size, this.value)
-
-
     return (
       <span class={this.ns.e('label')}>
         {this.label ? this.label : <slot />}
-
       </span>
     )
-
-
-
   }
 
 
   render() {
 
     return (
-      <Host class={this.getHostClass()}>
+      <Host  >
         <label class={this.getHostClass()} role="checkbox">
           <span
             class={this.getSpanClass()}
             tabindex={this.indeterminate ? 0 : undefined}
-
           >
             <span class={this.ns.e('inner')} />
-
             {this.getInputDom()}
-
           </span>
-
-
-          {/* {
-            this.el.slot || this.label ?
-              <span class={this.ns.e('label')}>
-                {!this.el.slot ? this.label : ''}
-                <slot />
-              </span> : ''
-
-          } */}
           {this.getLableSlot()}
-          {/* <slot /> */}
 
         </label>
       </Host>
-
 
     )
   }

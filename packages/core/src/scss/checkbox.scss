@@ -34,9 +34,17 @@ $checkbox-bordered-input-width: map.merge(
   $checkbox-bordered-input-width
 );
 
+
+
 @include b(checkbox) {
   @include set-component-css-var('checkbox', $checkbox);
 }
+
+
+#{$namespace}-checkbox {
+  margin-right: 30px;
+}
+
 
 @include b(checkbox) {
   color: var(--ca-checkbox-text-color);
@@ -48,7 +56,7 @@ $checkbox-bordered-input-width: map.merge(
   align-items: center;
   white-space: nowrap;
   user-select: none;
-  margin-right: 30px;
+
   height: map.get($checkbox-height, 'default');
 
   @include when(bordered) {

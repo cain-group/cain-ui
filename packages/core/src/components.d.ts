@@ -28,15 +28,21 @@ export namespace Components {
         "border": boolean;
         "checked": boolean;
         "disabled": boolean;
+        "disabledByFahter": boolean;
         "falseLabel": [string, number];
         "indeterminate": boolean;
         "label": string;
-        "max": [string, number];
-        "min": [string, number];
         "name": string;
         "size": string;
         "tabindex": number;
         "trueLabel": [string, number];
+        "value": string;
+    }
+    interface CaCheckboxGroup {
+        "disabled": boolean;
+        "max": string;
+        "min": string;
+        "size": string;
         "value": string;
     }
     interface CaCol {
@@ -100,6 +106,12 @@ declare global {
         prototype: HTMLCaCheckboxElement;
         new (): HTMLCaCheckboxElement;
     };
+    interface HTMLCaCheckboxGroupElement extends Components.CaCheckboxGroup, HTMLStencilElement {
+    }
+    var HTMLCaCheckboxGroupElement: {
+        prototype: HTMLCaCheckboxGroupElement;
+        new (): HTMLCaCheckboxGroupElement;
+    };
     interface HTMLCaColElement extends Components.CaCol, HTMLStencilElement {
     }
     var HTMLCaColElement: {
@@ -153,6 +165,7 @@ declare global {
         "ca-button": HTMLCaButtonElement;
         "ca-button-group": HTMLCaButtonGroupElement;
         "ca-checkbox": HTMLCaCheckboxElement;
+        "ca-checkbox-group": HTMLCaCheckboxGroupElement;
         "ca-col": HTMLCaColElement;
         "ca-container": HTMLCaContainerElement;
         "ca-footer": HTMLCaFooterElement;
@@ -186,15 +199,22 @@ declare namespace LocalJSX {
         "border"?: boolean;
         "checked"?: boolean;
         "disabled"?: boolean;
+        "disabledByFahter"?: boolean;
         "falseLabel"?: [string, number];
         "indeterminate"?: boolean;
         "label"?: string;
-        "max"?: [string, number];
-        "min"?: [string, number];
         "name"?: string;
+        "onCheckboxChange"?: (event: CustomEvent<any>) => void;
         "size"?: string;
         "tabindex"?: number;
         "trueLabel"?: [string, number];
+        "value"?: string;
+    }
+    interface CaCheckboxGroup {
+        "disabled"?: boolean;
+        "max"?: string;
+        "min"?: string;
+        "size"?: string;
         "value"?: string;
     }
     interface CaCol {
@@ -237,6 +257,7 @@ declare namespace LocalJSX {
         "ca-button": CaButton;
         "ca-button-group": CaButtonGroup;
         "ca-checkbox": CaCheckbox;
+        "ca-checkbox-group": CaCheckboxGroup;
         "ca-col": CaCol;
         "ca-container": CaContainer;
         "ca-footer": CaFooter;
@@ -255,6 +276,7 @@ declare module "@stencil/core" {
             "ca-button": LocalJSX.CaButton & JSXBase.HTMLAttributes<HTMLCaButtonElement>;
             "ca-button-group": LocalJSX.CaButtonGroup & JSXBase.HTMLAttributes<HTMLCaButtonGroupElement>;
             "ca-checkbox": LocalJSX.CaCheckbox & JSXBase.HTMLAttributes<HTMLCaCheckboxElement>;
+            "ca-checkbox-group": LocalJSX.CaCheckboxGroup & JSXBase.HTMLAttributes<HTMLCaCheckboxGroupElement>;
             "ca-col": LocalJSX.CaCol & JSXBase.HTMLAttributes<HTMLCaColElement>;
             "ca-container": LocalJSX.CaContainer & JSXBase.HTMLAttributes<HTMLCaContainerElement>;
             "ca-footer": LocalJSX.CaFooter & JSXBase.HTMLAttributes<HTMLCaFooterElement>;

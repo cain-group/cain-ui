@@ -4,11 +4,6 @@
 
 ## 基础用法
 
-单独使用可以表示两种状态之间的切换，写在标签中的内容为 checkbox 按钮后的介绍。
-
-`checkbox-group`元素能把多个 checkbox 管理为一组，只需要在 Group 中使用 `value` 绑定 `Array` 类型的变量即可。 只有一个选项时的默认值类型为 `Boolean`，当选中时值为`true`。 `ca-checkbox` 标签中的内容将成为复选框按钮之后的描述。
-
-
 
 ```jsx
 import React from 'react';
@@ -63,14 +58,12 @@ export default () =>
 import React from 'react';
 
 export default () =>  
-// const checkList = ref(['selected and disabled', 'Option A'])
 <div>
-    <ca-checkbox-group value="checkList">
+    <ca-checkbox-group value="Option A,Option B">
         <ca-checkbox label="Option A" />
         <ca-checkbox label="Option B" />
         <ca-checkbox label="Option C" />
-        <ca-checkbox label="disabled" disabled />
-        <ca-checkbox label="selected and disabled" disabled />
+        <ca-checkbox label="Option D"  />
   </ca-checkbox-group>
 </div>
   
@@ -78,7 +71,20 @@ export default () =>
 
 ## 中间状态
 
-`indeterminate` 属性用以表示 checkbox 的不确定状态，一般用于实现全选的效果
+`indeterminate` 属性用以表示 checkbox 的不确定状态
+
+
+```jsx
+import React from 'react';
+
+export default () =>  
+  <div>
+    <ca-checkbox indeterminate="true" label="Option A" id="checkbox1"  />
+  </div>
+```
+
+
+
 
 
 ## 可选项目数量的限制
@@ -90,62 +96,8 @@ export default () =>
 import React from 'react';
 
 export default () =>  
-// const checkList = ref(['selected and disabled', 'Option A'])
 <div>
-    <ca-checkbox-group value="checkList" min="1" max="2">
-        <ca-checkbox label="Option A" />
-        <ca-checkbox label="Option B" />
-        <ca-checkbox label="Option C" />
-        <ca-checkbox label="Option D"  />
-  </ca-checkbox-group>
-</div>
-  
-```
-
-## 按钮样式
-
-按钮样式的多选组合。
-
-只需要把 `ca-checkbox` 元素替换为 `ca-checkbox-button` 元素即可。 此外还提供了`size`属性。
-
-
-
-```jsx
-import React from 'react';
-
-export default () =>  
-// const checkList = ref(['selected and disabled', 'Option A'])
-<div>
-    <ca-checkbox-group value="checkList" size="large">
-        <ca-checkbox label="Option A" />
-        <ca-checkbox label="Option B" />
-        <ca-checkbox label="Option C" />
-        <ca-checkbox label="Option D"  />
-  </ca-checkbox-group>
-
-
-    <ca-checkbox-group value="checkList" >
-        <ca-checkbox label="Option A" />
-        <ca-checkbox label="Option B" />
-        <ca-checkbox label="Option C" />
-        <ca-checkbox label="Option D"  />
-  </ca-checkbox-group>
-
-  <ca-checkbox-group value="checkList" size="small">
-        <ca-checkbox label="Option A" />
-        <ca-checkbox label="Option B" />
-        <ca-checkbox label="Option C" />
-        <ca-checkbox label="Option D"  />
-  </ca-checkbox-group>
-
-    <ca-checkbox-group value="checkList" size="small">
-        <ca-checkbox label="Option A" />
-        <ca-checkbox disabled label="Option B" />
-        <ca-checkbox disabled label="Option C" />
-        <ca-checkbox label="Option D"  />
-  </ca-checkbox-group>
-
-  <ca-checkbox-group value="checkList" size="small" disabled>
+    <ca-checkbox-group  min="1" max="2">
         <ca-checkbox label="Option A" />
         <ca-checkbox label="Option B" />
         <ca-checkbox label="Option C" />
@@ -167,22 +119,25 @@ import React from 'react';
 export default () =>  
 // const checkList = ref(['selected and disabled', 'Option A'])
 <div>
-     <ca-checkbox value="checked1" label="Option1" size="large" border />
+  <div>
+      <ca-checkbox value="checked1" label="Option1" size="large" border />
+  </div>
+  <div>
+      <ca-checkbox value="checked3" label="Option1" border />
 
-     <ca-checkbox value="checked3" label="Option1" border />
-
-
-
-     <ca-checkbox-group value="checkboxGroup1" size="small">
-      <ca-checkbox label="Option1" border />
-      <ca-checkbox label="Option2" border />
-    </ca-checkbox-group>
-
-
-    <ca-checkbox-group value="checkboxGroup1" size="small">
+  </div>
+  <div>
+      <ca-checkbox-group value="checkboxGroup1" size="small">
+        <ca-checkbox label="Option1" border />
+        <ca-checkbox label="Option2" border />
+      </ca-checkbox-group>
+  </div>
+  <div>
+   <ca-checkbox-group value="checkboxGroup1" size="small">
       <ca-checkbox label="Option1" border disabled />
       <ca-checkbox label="Option2" border disabled />
     </ca-checkbox-group>
+    </div>
 </div>
   
 ```
@@ -191,18 +146,16 @@ export default () =>
 
 ## Checkbox 属性
 
-| 属性          | 说明                                                                | 类型                               | 可选值                 | 默认值 |
-|---------------|-------------------------------------------------------------------|------------------------------------|------------------------|--------|
-| value         | 选中项绑定值                                                        | string / number / boolean          | —                      | —      |
-| label         | 选中状态的值（只有在`checkbox-group`或者绑定对象类型为`array`时有效） | string / number / boolean / object | —                      | —      |
-| true-label    | 选中时的值                                                          | string / number                    | —                      | —      |
-| false-label   | 没有选中时的值                                                      | string / number                    | —                      | —      |
-| disabled      | 是否禁用                                                            | boolean                            | —                      | false  |
-| border        | 是否显示边框                                                        | boolean                            | —                      | false  |
-| size          | Checkbox 的尺寸                                                     | string                             | large / default /small | —      |
-| name          | 原生 name 属性                                                      | string                             | —                      | —      |
-| checked       | 当前是否勾选                                                        | boolean                            | —                      | false  |
-| indeterminate | 设置 indeterminate 状态，只负责样式控制                              | boolean                            | —                      | false  |
+| 属性          | 说明                                                                | 类型    | 可选值                 | 默认值 |
+|---------------|-------------------------------------------------------------------|---------|------------------------|--------|
+| value         | 选中项绑定值                                                        | string  | —                      | —      |
+| label         | 选中状态的值（只有在`checkbox-group`或者绑定对象类型为`array`时有效） | string  | —                      | —      |
+| disabled      | 是否禁用                                                            | boolean | —                      | false  |
+| border        | 是否显示边框                                                        | boolean | —                      | false  |
+| size          | Checkbox 的尺寸                                                     | string  | large / default /small | —      |
+| name          | 原生 name 属性                                                      | string  | —                      | —      |
+| checked       | 当前是否勾选                                                        | boolean | —                      | false  |
+| indeterminate | 设置 indeterminate 状态，只负责样式控制                              | boolean | —                      | false  |
 
 ## Checkbox 事件
 
@@ -218,15 +171,13 @@ export default () =>
 
 ## Checkbox-Group 属性
 
-| 属性       | 说明                                       | 类型    | 可选值                 | 默认值  |
-|------------|------------------------------------------|---------|------------------------|---------|
-| value      | 绑定值                                     | array   | —                      | []      |
-| size       | 多选框组尺寸                               | string  | large / default /small | —       |
-| disabled   | 是否禁用                                   | boolean | —                      | false   |
-| min        | 可被勾选的 checkbox 的最小数量             | number  | —                      | —       |
-| max        | 可被勾选的 checkbox 的最大数量             | number  | —                      | —       |
-| text-color | 按钮形式的 Checkbox 激活时的文本颜色       | string  | —                      | #ffffff |
-| fill       | 按钮形式的 Checkbox 激活时的填充色和边框色 | string  | —                      | #409EFF |
+| 属性     | 说明                           | 类型    | 可选值                 | 默认值 |
+|----------|------------------------------|---------|------------------------|--------|
+| value    | 绑定值                         | array   | —                      | []     |
+| size     | 多选框组尺寸                   | string  | large / default /small | —      |
+| disabled | 是否禁用                       | boolean | —                      | false  |
+| min      | 可被勾选的 checkbox 的最小数量 | number  | —                      | —      |
+| max      | 可被勾选的 checkbox 的最大数量 | number  | —                      | —      |
 
 ## Checkbox-Group 事件
 
@@ -239,22 +190,3 @@ export default () =>
 | 插槽名 | 说明           | 子标签                     |
 |--------|--------------|----------------------------|
 | -      | 自定义默认内容 | Checkbox / Checkbox-button |
-
-## Checkbox-Button 属性
-
-| 属性        | 说明                                            | 类型                               | 可选值 | 默认值 |
-|-------------|-----------------------------------------------|------------------------------------|--------|--------|
-| label       | 选中状态的值，只有在绑定对象类型为 array 时有效。 | string / number / boolean / object | —      | —      |
-| true-label  | 选中时的值                                      | string / number                    | —      | —      |
-| false-label | 没有选中时的值                                  | string / number                    | —      | —      |
-| disabled    | 是否禁用                                        | boolean                            | —      | false  |
-| name        | 原生 name 属性                                  | string                             | —      | —      |
-| checked     | 当前是否勾选                                    | boolean                            | —      | false  |
-
-## Checkbox-Button 插槽
-
-| 插槽名 | 描述           |
-|--------|--------------|
-| —      | 自定义默认内容 |
-
-
