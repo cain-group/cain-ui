@@ -71,6 +71,55 @@ export class CaButtonGroup {
 }
 
 
+export declare interface CaCheckbox extends Components.CaCheckbox {
+  /**
+   *  
+   */
+  checkboxChange: EventEmitter<CustomEvent<any>>;
+
+}
+
+@ProxyCmp({
+  defineCustomElementFn: undefined,
+  inputs: ['border', 'checked', 'disabled', 'disabledByFahter', 'falseLabel', 'indeterminate', 'label', 'name', 'size', 'tabindex', 'trueLabel', 'value']
+})
+@Component({
+  selector: 'ca-checkbox',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['border', 'checked', 'disabled', 'disabledByFahter', 'falseLabel', 'indeterminate', 'label', 'name', 'size', 'tabindex', 'trueLabel', 'value']
+})
+export class CaCheckbox {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['checkboxChange']);
+  }
+}
+
+
+export declare interface CaCheckboxGroup extends Components.CaCheckboxGroup {}
+
+@ProxyCmp({
+  defineCustomElementFn: undefined,
+  inputs: ['disabled', 'max', 'min', 'size', 'value']
+})
+@Component({
+  selector: 'ca-checkbox-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  inputs: ['disabled', 'max', 'min', 'size', 'value']
+})
+export class CaCheckboxGroup {
+  protected el: HTMLElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
 export declare interface CaCol extends Components.CaCol {}
 
 @ProxyCmp({

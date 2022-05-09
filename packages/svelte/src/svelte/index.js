@@ -4,6 +4,8 @@
 import CaAside from './CaAside.svelte';
 import CaButton from './CaButton.svelte';
 import CaButtonGroup from './CaButtonGroup.svelte';
+import CaCheckbox from './CaCheckbox.svelte';
+import CaCheckboxGroup from './CaCheckboxGroup.svelte';
 import CaCol from './CaCol.svelte';
 import CaContainer from './CaContainer.svelte';
 import CaFooter from './CaFooter.svelte';
@@ -15,6 +17,8 @@ import CaRow from './CaRow.svelte';
 export { CaAside };
 export { CaButton };
 export { CaButtonGroup };
+export { CaCheckbox };
+export { CaCheckboxGroup };
 export { CaCol };
 export { CaContainer };
 export { CaFooter };

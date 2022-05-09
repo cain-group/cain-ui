@@ -11,6 +11,8 @@ defineCustomElements();
 export const CaAside = /*@__PURE__*/createReactComponent<JSX.CaAside, HTMLCaAsideElement>('ca-aside');
 export const CaButton = /*@__PURE__*/createReactComponent<JSX.CaButton, HTMLCaButtonElement>('ca-button');
 export const CaButtonGroup = /*@__PURE__*/createReactComponent<JSX.CaButtonGroup, HTMLCaButtonGroupElement>('ca-button-group');
+export const CaCheckbox = /*@__PURE__*/createReactComponent<JSX.CaCheckbox, HTMLCaCheckboxElement>('ca-checkbox');
+export const CaCheckboxGroup = /*@__PURE__*/createReactComponent<JSX.CaCheckboxGroup, HTMLCaCheckboxGroupElement>('ca-checkbox-group');
 export const CaCol = /*@__PURE__*/createReactComponent<JSX.CaCol, HTMLCaColElement>('ca-col');
 export const CaContainer = /*@__PURE__*/createReactComponent<JSX.CaContainer, HTMLCaContainerElement>('ca-container');
 export const CaFooter = /*@__PURE__*/createReactComponent<JSX.CaFooter, HTMLCaFooterElement>('ca-footer');

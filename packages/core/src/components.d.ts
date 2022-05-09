@@ -29,13 +29,11 @@ export namespace Components {
         "checked": boolean;
         "disabled": boolean;
         "disabledByFahter": boolean;
-        "falseLabel": [string, number];
         "indeterminate": boolean;
         "label": string;
         "name": string;
         "size": string;
         "tabindex": number;
-        "trueLabel": [string, number];
         "value": string;
     }
     interface CaCheckboxGroup {
@@ -200,14 +198,12 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "disabled"?: boolean;
         "disabledByFahter"?: boolean;
-        "falseLabel"?: [string, number];
         "indeterminate"?: boolean;
         "label"?: string;
         "name"?: string;
         "onCheckboxChange"?: (event: CustomEvent<any>) => void;
         "size"?: string;
         "tabindex"?: number;
-        "trueLabel"?: [string, number];
         "value"?: string;
     }
     interface CaCheckboxGroup {

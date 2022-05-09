@@ -32,6 +32,32 @@ export const CaButtonGroup = /*@__PURE__*/ defineContainer<JSX.CaButtonGroup>('c
 ]);
 
 
+export const CaCheckbox = /*@__PURE__*/ defineContainer<JSX.CaCheckbox>('ca-checkbox', undefined, [
+  'value',
+  'label',
+  'indeterminate',
+  'disabled',
+  'disabledByFahter',
+  'checked',
+  'name',
+  'trueLabel',
+  'falseLabel',
+  'border',
+  'size',
+  'tabindex',
+  'checkboxChange'
+]);
+
+
+export const CaCheckboxGroup = /*@__PURE__*/ defineContainer<JSX.CaCheckboxGroup>('ca-checkbox-group', undefined, [
+  'disabled',
+  'min',
+  'max',
+  'size',
+  'value'
+]);
+
+
 export const CaCol = /*@__PURE__*/ defineContainer<JSX.CaCol>('ca-col', undefined, [
   'span',
   'offset',

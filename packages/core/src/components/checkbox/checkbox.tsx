@@ -22,10 +22,6 @@ export class Checkbox {
 
   @Prop() name: string = undefined;
 
-  @Prop() trueLabel: [string, number] = undefined;
-
-  @Prop() falseLabel: [string, number] = undefined;
-
   @Prop() border: boolean;
 
   @Prop() size: string;
@@ -37,8 +33,6 @@ export class Checkbox {
   @State() innerChecked: boolean;
 
 
-
-
   @Event({
     eventName: 'checkboxChange',
     composed: true,
@@ -46,7 +40,6 @@ export class Checkbox {
     bubbles: true,
   }) checkboxChange: EventEmitter;
 
-  // @Event() click: EventEmitter<Event>;
 
   @Element() el: HTMLElement;
 
@@ -55,9 +48,6 @@ export class Checkbox {
 
 
 
-  // getDisabled(): boolean {
-  //   return this.disabled || this.loading
-  // }
 
   getCheckboxSize(): string {
     const fatherItem = this.el.parentElement
@@ -66,54 +56,7 @@ export class Checkbox {
 
   getIsDisabled(): boolean {
 
-    // const isLimitDisabled = computed(() => {
-    //   const max = checkboxGroup.max?.value
-    //   const min = checkboxGroup.min?.value
-    //   return (
-    //     (!!(max || min) && model.value.length >= max && !isChecked.value) ||
-    //     (model.value.length <= min && isChecked.value)
-    //   )
-    // })
-
-    // const isDisabled = computed(() => {
-    //   const disabled = props.disabled || elForm.disabled
-    //   return (
-    //     (isGroup.value
-    //       ? checkboxGroup.disabled?.value || disabled || isLimitDisabled.value
-    //       : props.disabled || elForm.disabled) ?? false
-    //   )
-    // })
-   
-
     const fatherItem = this.el.parentElement
-
-    let max = +Infinity
-    let min = -Infinity
-    if (fatherItem.getAttribute('max') !== null) {
-      max = +fatherItem.getAttribute('max')
-    }
-    if (fatherItem.getAttribute('min') !== null) {
-      min = +fatherItem.getAttribute('min')
-    }
-
-    //   return (
-    //     (!!(max || min) && model.value.length >= max && !isChecked.value) ||
-    //     (model.value.length <= min && isChecked.value)
-    //   )
-
-    // 
-    // const list = Array.from(fatherItem.children).filter((item: HTMLInputElement) => {
-    //   return item.checked
-    // })
-    // let maxMinDisabled = false
-
-    // const isChecked =   this.getIsChecked()
-
-    // if(list.length>=max && !isChecked){
-    //   maxMinDisabled = true
-    // }
-
-    // console.log('getIsDisabled',maxMinDisabled)
 
     const fDisabled = fatherItem.getAttribute('disabled')
 
@@ -123,44 +66,14 @@ export class Checkbox {
 
   getIsChecked(): boolean {
 
-    // const value = this.checked
-    // if ( value === 'true') {
-    //   return true
-    // } 
-    // return false
-
-    // if(this.checked){
-    //   return true
-    // }
     return this.checked
-
-
-    // else if (Array.isArray(value)) {
-    //   return value.includes((this.label as unknown as string))
-    // } 
-    // else if (value !== null && value !== undefined) {
-    //   return value === this.trueLabel
-    // }
-    //  else {
-    // return !!value
-    // }
-    // return value === 'true'
 
   }
 
   getHostClass(): string {
-
-    // const fatherItem = this.el.parentElement.parentElement
-    // const _type = this.type || fatherItem.getAttribute('type') || ''
-
-    // const _size = this.size || fatherItem.getAttribute('size') || ''
-
-
-    // const _size = useSize(computed(() => buttonGroupContext?.size))
     const checkboxSize = this.getCheckboxSize()
     const isDisabled = this.getIsDisabled()
     const isChecked = this.getIsChecked();
-    // console.log('getHostClass')
     return [
       this.ns.b(),
       this.ns.m(checkboxSize),
@@ -173,10 +86,8 @@ export class Checkbox {
 
   getSpanClass(): string {
 
-
     const isDisabled = this.getIsDisabled()
     const isChecked = this.getIsChecked();
-    // console.log('getSpanClass')
 
 
     return [
@@ -191,13 +102,7 @@ export class Checkbox {
   handlerChange(e: InputEvent) {
 
 
-    // if (isLimitExceeded.value) return
     const target = e.target as HTMLInputElement
-    // const value = target.checked
-    //   ? this.trueLabel ?? true
-    //   : this.falseLabel ?? false
-    // this.value = `${value}` 
-
 
     this.checked = target.checked
 
