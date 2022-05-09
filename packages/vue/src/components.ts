@@ -40,8 +40,6 @@ export const CaCheckbox = /*@__PURE__*/ defineContainer<JSX.CaCheckbox>('ca-chec
   'disabledByFahter',
   'checked',
   'name',
-  'trueLabel',
-  'falseLabel',
   'border',
   'size',
   'tabindex',

@@ -28,12 +28,6 @@ interface CaCheckboxProps {
   name?: Components.CaCheckbox["name"]
   
   /**  */
-  trueLabel?: Components.CaCheckbox["trueLabel"]
-  
-  /**  */
-  falseLabel?: Components.CaCheckbox["falseLabel"]
-  
-  /**  */
   border?: Components.CaCheckbox["border"]
   
   /**  */
@@ -80,8 +74,8 @@ function create_fragment(ctx) {
 	let current;
 	let mounted;
 	let dispose;
-	const default_slot_template = /*#slots*/ ctx[17].default;
-	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[16], null);
+	const default_slot_template = /*#slots*/ ctx[14].default;
+	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[13], null);
 
 	return {
 		c() {
@@ -105,7 +99,7 @@ function create_fragment(ctx) {
 				default_slot.m(ca_checkbox, null);
 			}
 
-			/*ca_checkbox_binding*/ ctx[18](ca_checkbox);
+			/*ca_checkbox_binding*/ ctx[15](ca_checkbox);
 			current = true;
 
 			if (!mounted) {
@@ -115,15 +109,15 @@ function create_fragment(ctx) {
 		},
 		p(ctx, [dirty]) {
 			if (default_slot) {
-				if (default_slot.p && (!current || dirty & /*$$scope*/ 65536)) {
+				if (default_slot.p && (!current || dirty & /*$$scope*/ 8192)) {
 					update_slot_base(
 						default_slot,
 						default_slot_template,
 						ctx,
-						/*$$scope*/ ctx[16],
+						/*$$scope*/ ctx[13],
 						!current
-						? get_all_dirty_from_scope(/*$$scope*/ ctx[16])
-						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[16], dirty, null),
+						? get_all_dirty_from_scope(/*$$scope*/ ctx[13])
+						: get_slot_changes(default_slot_template, /*$$scope*/ ctx[13], dirty, null),
 						null
 					);
 				}
@@ -181,7 +175,7 @@ function create_fragment(ctx) {
 		d(detaching) {
 			if (detaching) detach(ca_checkbox);
 			if (default_slot) default_slot.d(detaching);
-			/*ca_checkbox_binding*/ ctx[18](null);
+			/*ca_checkbox_binding*/ ctx[15](null);
 			mounted = false;
 			dispose();
 		}
@@ -200,15 +194,13 @@ function instance($$self, $$props, $$invalidate) {
 	let { disabledByFahter = undefined } = $$props;
 	let { checked = undefined } = $$props;
 	let { name = undefined } = $$props;
-	let { trueLabel = undefined } = $$props;
-	let { falseLabel = undefined } = $$props;
 	let { border = undefined } = $$props;
 	let { size = undefined } = $$props;
 	let { tabindex = undefined } = $$props;
 	const getWebComponent = () => __ref;
 
 	onMount(() => {
-		$$invalidate(15, __mounted = true);
+		__mounted = true;
 	});
 
 	const setProp = (prop, value) => {
@@ -235,22 +227,10 @@ function instance($$self, $$props, $$invalidate) {
 		if ('disabledByFahter' in $$props) $$invalidate(4, disabledByFahter = $$props.disabledByFahter);
 		if ('checked' in $$props) $$invalidate(5, checked = $$props.checked);
 		if ('name' in $$props) $$invalidate(6, name = $$props.name);
-		if ('trueLabel' in $$props) $$invalidate(12, trueLabel = $$props.trueLabel);
-		if ('falseLabel' in $$props) $$invalidate(13, falseLabel = $$props.falseLabel);
 		if ('border' in $$props) $$invalidate(7, border = $$props.border);
 		if ('size' in $$props) $$invalidate(8, size = $$props.size);
 		if ('tabindex' in $$props) $$invalidate(9, tabindex = $$props.tabindex);
-		if ('$$scope' in $$props) $$invalidate(16, $$scope = $$props.$$scope);
-	};
-
-	$$self.$$.update = () => {
-		if ($$self.$$.dirty & /*__mounted, trueLabel*/ 36864) {
-			$: if (__mounted) setProp('trueLabel', trueLabel);
-		}
-
-		if ($$self.$$.dirty & /*__mounted, falseLabel*/ 40960) {
-			$: if (__mounted) setProp('falseLabel', falseLabel);
-		}
+		if ('$$scope' in $$props) $$invalidate(13, $$scope = $$props.$$scope);
 	};
 
 	return [
@@ -266,10 +246,7 @@ function instance($$self, $$props, $$invalidate) {
 		tabindex,
 		__ref,
 		onEvent,
-		trueLabel,
-		falseLabel,
 		getWebComponent,
-		__mounted,
 		$$scope,
 		slots,
 		ca_checkbox_binding
@@ -300,12 +277,10 @@ class CaCheckbox extends SvelteComponent {
 			disabledByFahter: 4,
 			checked: 5,
 			name: 6,
-			trueLabel: 12,
-			falseLabel: 13,
 			border: 7,
 			size: 8,
 			tabindex: 9,
-			getWebComponent: 14
+			getWebComponent: 12
 		});
 	}
 
@@ -372,24 +347,6 @@ class CaCheckbox extends SvelteComponent {
 		flush();
 	}
 
-	get trueLabel() {
-		return this.$$.ctx[12];
-	}
-
-	set trueLabel(trueLabel) {
-		this.$$set({ trueLabel });
-		flush();
-	}
-
-	get falseLabel() {
-		return this.$$.ctx[13];
-	}
-
-	set falseLabel(falseLabel) {
-		this.$$set({ falseLabel });
-		flush();
-	}
-
 	get border() {
 		return this.$$.ctx[7];
 	}
@@ -418,7 +375,7 @@ class CaCheckbox extends SvelteComponent {
 	}
 
 	get getWebComponent(): HTMLCaCheckboxElement | undefined {
-		return this.$$.ctx[14];
+		return this.$$.ctx[12];
 	}
 }
 

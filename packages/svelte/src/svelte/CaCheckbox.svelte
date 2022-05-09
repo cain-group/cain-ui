@@ -14,8 +14,6 @@ export let disabled = undefined;
 export let disabledByFahter = undefined;
 export let checked = undefined;
 export let name = undefined;
-export let trueLabel = undefined;
-export let falseLabel = undefined;
 export let border = undefined;
 export let size = undefined;
 export let tabindex = undefined;
@@ -28,8 +26,7 @@ onMount(() => { __mounted = true; });
 
 const setProp = (prop, value) => { if (__ref) __ref[prop] = value; };
 
-$: if (__mounted) setProp('trueLabel', trueLabel);
-$: if (__mounted) setProp('falseLabel', falseLabel);
+
 
 const onEvent = (e) => {
   e.stopPropagation();

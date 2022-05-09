@@ -81,13 +81,13 @@ export declare interface CaCheckbox extends Components.CaCheckbox {
 
 @ProxyCmp({
   defineCustomElementFn: undefined,
-  inputs: ['border', 'checked', 'disabled', 'disabledByFahter', 'falseLabel', 'indeterminate', 'label', 'name', 'size', 'tabindex', 'trueLabel', 'value']
+  inputs: ['border', 'checked', 'disabled', 'disabledByFahter', 'indeterminate', 'label', 'name', 'size', 'tabindex', 'value']
 })
 @Component({
   selector: 'ca-checkbox',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['border', 'checked', 'disabled', 'disabledByFahter', 'falseLabel', 'indeterminate', 'label', 'name', 'size', 'tabindex', 'trueLabel', 'value']
+  inputs: ['border', 'checked', 'disabled', 'disabledByFahter', 'indeterminate', 'label', 'name', 'size', 'tabindex', 'value']
 })
 export class CaCheckbox {
   protected el: HTMLElement;
