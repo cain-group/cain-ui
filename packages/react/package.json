@@ -1,7 +1,7 @@
 {
   "name": "@cain-group/cain-ui-react",
   "sideEffects": false,
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "cain-group",
   "license": "MIT",
   "description": "React specific wrapper for Cain UI",
@@ -27,7 +27,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@cain-group/cain-ui": "0.0.12"
+    "@cain-group/cain-ui": "0.0.13"
   },
   "resolutions": {
     "@types/react": "17.0.34",
