@@ -14,6 +14,7 @@ log.txt
 *.sublime-workspace
 
 .umi/
+.umi-production/
 .stencil/
 .idea/
 .vscode/
