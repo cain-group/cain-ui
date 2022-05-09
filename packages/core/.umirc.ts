@@ -8,8 +8,8 @@ const repo = 'cain-ui';
 
 export default defineConfig({
   title: 'Cain UI',
-  favicon:'./assets/logo.png',
-  logo:'./assets/logo.png',
+  favicon:'https://raw.githubusercontent.com/cain-group/cain-ui/gh-pages/assets/logo.png',
+  logo:'https://raw.githubusercontent.com/cain-group/cain-ui/gh-pages/assets/logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
   hash: true,

@@ -1,7 +1,7 @@
 
 <br>
 <p align="center">
-  <img width="200px" src="https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/logo2.jpeg">
+  <img width="200px" src="https://raw.githubusercontent.com/cain-group/cain-ui/gh-pages/assets/logo2.jpeg">
 </p>
 
 <p align="center">Cain UI -  面向未来的原生 web components UI组件库 </p>
