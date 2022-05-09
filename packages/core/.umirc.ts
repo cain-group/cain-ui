@@ -8,10 +8,8 @@ const repo = 'cain-ui';
 
 export default defineConfig({
   title: 'Cain UI',
-  favicon:
-    'https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/logo.png',
-  logo:
-    'https://raw.githubusercontent.com/cain-group/cain-ui/main/assets/logo.png',
+  favicon:'./assets/logo.png',
+  logo:'./assets/logo.png',
   outputPath: 'docs-dist',
   mode: 'site',
   hash: true,
@@ -20,6 +18,7 @@ export default defineConfig({
   publicPath: `/${repo}/`,
   copy: [
     { from: '/www/build', to: 'build' },
+    { from: '/assets', to: 'assets' },
   ],
   resolve:{
     includes:['docs'],
