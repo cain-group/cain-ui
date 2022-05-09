@@ -1,7 +1,7 @@
 {
   "name": "@cain-group/cain-ui-vue",
   "sideEffects": false,
-  "version": "0.0.15",
+  "version": "0.0.16",
   "author": "cain-group",
   "license": "MIT",
   "description": "Vue specific wrapper for Cain UI",
@@ -39,7 +39,7 @@
     "vue": "^3.1.1"
   },
   "dependencies": {
-    "@cain-group/cain-ui": "0.0.15"
+    "@cain-group/cain-ui": "0.0.16"
   },
   "jest": {
     "preset": "ts-jest",
@@ -58,5 +58,5 @@
       }
     }
   },
-  "gitHead": "250c2d6c9459692d21f5c628224c6e10d3124fb5"
+  "gitHead": "cd03b5ddb24fc991faa25ce14c0c53cd57447763"
 }

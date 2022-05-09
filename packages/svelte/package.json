@@ -1,7 +1,7 @@
 {
   "name": "@cain-group/cain-ui-svelte",
   "sideEffects": false,
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Svelte specific wrapper for Cain UI",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -30,7 +30,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "@cain-group/cain-ui": "0.0.15"
+    "@cain-group/cain-ui": "0.0.16"
   },
   "devDependencies": {
     "@testing-library/svelte": "^3.0.3",
@@ -39,5 +39,5 @@
     "svelte": "^3.46.4",
     "typescript": "4.6.3"
   },
-  "gitHead": "250c2d6c9459692d21f5c628224c6e10d3124fb5"
+  "gitHead": "cd03b5ddb24fc991faa25ce14c0c53cd57447763"
 }
